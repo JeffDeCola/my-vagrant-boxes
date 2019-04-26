@@ -1,4 +1,4 @@
 #!/bin/bash
-# my-docker-image-builds set-pipeline.sh
+# my-vagrant-boxes set-pipeline.sh
 
-fly -t ci set-pipeline -p my-docker-image-builds -c pipeline.yml --load-vars-from ../../../.credentials.yml
+fly -t ci set-pipeline -p my-vagrant-boxes -c pipeline.yml --load-vars-from ../../../.credentials.yml

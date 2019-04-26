@@ -1,4 +1,4 @@
-# my-docker-image-builds task-readme-github-pages.yml
+# my-vagrant-boxes task-readme-github-pages.yml
 
 platform: linux
 
@@ -9,11 +9,11 @@ image_resource:
     tag: 1.7.1
 
 inputs:
-- name: my-docker-image-builds
+- name: my-vagrant-boxes
 
 outputs:
-- name: my-docker-image-builds-updated
+- name: my-vagrant-boxes-updated
 
 run:
-  path: ./my-docker-image-builds/ci/scripts/readme-github-pages.sh
+  path: ./my-vagrant-boxes/ci/scripts/readme-github-pages.sh
   # args: [-debug]
