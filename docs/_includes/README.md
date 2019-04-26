@@ -1,39 +1,9 @@
-# my-vagrant-boxes
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/402cd0e7cab3f6405cdb/maintainability)](https://codeclimate.com/github/JeffDeCola/my-docker-image-builds/maintainability)
-[![Issue Count](https://codeclimate.com/github/JeffDeCola/my-docker-image-builds/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/my-docker-image-builds/issues)
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
-
-`my-vagrant-boxes` _is a place for me to use vagrant boxes and create vagrant boxes._
-
-`my-vagrant-boxes`
-[GitHub Webpage](https://jeffdecola.github.io/my-docker-image-builds/).
-
-## DOCKER BUILDS LIST
-
-* `gcloud-kubectl`
-  The
-  [Dockerfile](https://github.com/JeffDeCola/my-docker-image-builds/blob/master/gcloud-kubectl/Dockerfile)
-  creates the
-  [docker Image](https://hub.docker.com/r/jeffdecola/gcloud-kubectl)
-  with at least these versions,
-  * ubuntu 18.04
-  * gcloud SDK 241.0.0
-    * Installed kubectl component
-  * kubectl 1.14
+# BUILDS
 
 * `go-gcloud-packer`
-  The
-  [Dockerfile](https://github.com/JeffDeCola/my-docker-image-builds/blob/master/go-gcloud-packer/Dockerfile)
-  creates the
-  [docker Image](https://hub.docker.com/r/jeffdecola/go-gcloud-packer)
-  with at least these versions,
-  * ubuntu 18.04
-  * go 1.11
-    * Installed package "google.golang.org/appengine"
-  * gcloud SDK 240.0.0
-    * Installed google app engine go extension component
-  * packer 1.3.5
+  [docker Image](https://hub.docker.com/r/jeffdecola/go-gcloud-packer) -
+  Contains debian, go, gcloud sdk and packer.
 
 ## RUN CONTAINER & GET BASH SHELL
 
@@ -58,7 +28,7 @@ and alert me of the changes via repo status and slack.
 A pipeline file [pipeline.yml](https://github.com/JeffDeCola/my-docker-image-builds/tree/master/ci/pipeline.yml)
 shows the entire ci flow. Visually, it looks like,
 
-![IMAGE - my-docker-image-builds concourse ci pipeline - IMAGE](docs/pics/my-docker-image-builds-pipeline.jpg)
+![IMAGE - my-docker-image-builds concourse ci pipeline - IMAGE](pics/my-docker-image-builds-pipeline.jpg)
 
 The `jobs` and `tasks` are,
 
