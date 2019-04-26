@@ -1,5 +1,5 @@
 #!/bin/sh
-# my-docker-image-builds readme-github-pages.sh
+# my-vagrant-boxes readme-github-pages.sh
 
 echo " "
 
@@ -17,14 +17,14 @@ else
     echo " "
 fi
 
-echo "The goal is to git clone /my-docker-image-builds to /my-docker-image-builds-updated"
+echo "The goal is to git clone /my-vagrant-boxes to /my-vagrant-boxes-updated"
 echo "Then script will edit the /docs/_includes/README.md for GITHUB WEBPAGES"
 echo "Finally push the changes in /docs/_includes/README.md to github"
 echo " "
 
 echo "At start, you should be in a /tmp/build/xxxxx directory with two folders:"
-echo "   /my-docker-image-builds"
-echo "   /my-docker-image-builds-updated (created in task-build-push.yml task file)"
+echo "   /my-vagrant-boxes"
+echo "   /my-vagrant-boxes-updated (created in task-build-push.yml task file)"
 echo " "
 
 echo "pwd is: $PWD"
@@ -34,12 +34,12 @@ echo "List whats in the current directory"
 ls -la
 echo " "
 
-echo "git clone my-docker-image-builds to my-docker-image-builds-updated"
-git clone my-docker-image-builds my-docker-image-builds-updated
+echo "git clone my-vagrant-boxes to my-vagrant-boxes-updated"
+git clone my-vagrant-boxes my-vagrant-boxes-updated
 echo " "
 
-echo "cd my-docker-image-builds-updated"
-cd my-docker-image-builds-updated
+echo "cd my-vagrant-boxes-updated"
+cd my-vagrant-boxes-updated
 echo " "
 
 echo "List whats in the current directory"
