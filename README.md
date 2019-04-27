@@ -70,10 +70,12 @@ Here is an illustration,
 
 ## CREATE VAGRANT BOX (USING PACKER)
 
-Packer is great at creating images, so lets create our own custom vagrant box.
+Packer is great at creating images, so lets create our own
+custom vagrant box using packer.
 
 ### jeffs-ubuntu-1804-virtualbox-vm-box
 
+We will use a base image and add htop to it.
 
 
 ## UPDATE GITHUB WEBPAGE USING CONCOURSE (OPTIONAL)
