@@ -34,7 +34,7 @@
   * gcloud SDK 240.0.0
     * Installed google app engine go extension component
   * packer 1.3.5
-
+d
 ## RUN CONTAINER & GET BASH SHELL
 
 To run a docker container.
