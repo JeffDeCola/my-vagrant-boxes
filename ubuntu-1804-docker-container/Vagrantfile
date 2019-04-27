@@ -3,10 +3,10 @@ Vagrant.configure(2) do |jeffsconfig|
 
     jeffsconfig.vm.provider "docker" do |jeffsdocker|
 
-        STEP 1 - GET BASE BOX (IMAGE)
+        # STEP 1 - GET BASE BOX (IMAGE)
         jeffsdocker.image = "tknerr/baseimage-ubuntu:18.04"
 
-        STEP 2 - CONFIGURE ON PROVIDER (DOCKER)
+        # STEP 2 - CONFIGURE ON PROVIDER (DOCKER)
         jeffsdocker.has_ssh = true
         jeffsdocker.name = "jeffs-ubuntu-container"
 
