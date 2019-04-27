@@ -6,23 +6,25 @@
 
 `my-vagrant-boxes` _is a place for me to use vagrant boxes and create vagrant boxes._
 
+My
+[vagrant cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet).
+
 Search for vagrant boxes at
 [vagrant box search](https://app.vagrantup.com/boxes/search).
 
-`my-vagrant-boxes`
 [GitHub Webpage](https://jeffdecola.github.io/my-vagrant-boxes/).
 
 ## USE VAGRANT BOXES
 
 * ubuntu-docker-container
-  * Run an ubuntu 18.04 in a docker container
-  * Use
+  * Goal - Run ubuntu 18.04 in a docker container
+  * Using
     [tknerr/baseimage-ubuntu-16.04](https://app.vagrantup.com/tknerr/boxes/baseimage-ubuntu-16.04)
     Vagrant Box (for docker)
- 
+  * [Vagrantfile]()
+* ubuntu-VirtualBox-VM  
 
 ## CREATE VAGRANT BOX
-
 
 ## UPDATE GITHUB WEBPAGE USING CONCOURSE (OPTIONAL)
 
