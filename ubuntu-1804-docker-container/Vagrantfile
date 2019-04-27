@@ -1,0 +1,12 @@
+# This will create a docker image on your machine from a vagrant box.
+Vagrant.configure("2") do |config|
+  config.vm.box = "tknerr/baseimage-ubuntu-18.04"
+  config.vm.box_version = "1.0.0"
+
+  # use shell and other provisioners as usual
+  config.vm.provision "shell", inline: "sudo apt-get install htop"
+end
+
+# Once you have the image I suggest
+# docker run --name docker-ubuntu -dit tknerr/baseimage-ubuntu-18.04
+# docker exec -i -t docker-ubuntu /bin/bash
