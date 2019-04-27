@@ -1,73 +1,118 @@
 # my-vagrant-boxes
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/402cd0e7cab3f6405cdb/maintainability)](https://codeclimate.com/github/JeffDeCola/my-docker-image-builds/maintainability)
-[![Issue Count](https://codeclimate.com/github/JeffDeCola/my-docker-image-builds/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/my-docker-image-builds/issues)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8b4765d37169a21f7f72/maintainability)](https://codeclimate.com/github/JeffDeCola/my-vagrant-boxes/maintainability)
+[![Issue Count](https://codeclimate.com/github/JeffDeCola/my-vagrant-boxes/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/my-vagrant-boxes/issues)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
-`my-vagrant-boxes` _is a place for me to use vagrant boxes and create vagrant boxes._
+`my-vagrant-boxes` _is a place for me to use vagrant boxes and create vagrant boxes.
+The goal is to create a common development environment._
 
-`my-vagrant-boxes`
-[GitHub Webpage](https://jeffdecola.github.io/my-docker-image-builds/).
+My
+[vagrant cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet)
+has a great illustration of the following boxes.
 
-## DOCKER BUILDS LIST
+Search for vagrant boxes at
+[vagrant box search](https://app.vagrantup.com/boxes/search).
 
-* `gcloud-kubectl`
-  The
-  [Dockerfile](https://github.com/JeffDeCola/my-docker-image-builds/blob/master/gcloud-kubectl/Dockerfile)
-  creates the
-  [docker Image](https://hub.docker.com/r/jeffdecola/gcloud-kubectl)
-  with at least these versions,
-  * ubuntu 18.04
-  * gcloud SDK 241.0.0
-    * Installed kubectl component
-  * kubectl 1.14
+[GitHub Webpage](https://jeffdecola.github.io/my-vagrant-boxes/).
 
-* `go-gcloud-packer`
-  The
-  [Dockerfile](https://github.com/JeffDeCola/my-docker-image-builds/blob/master/go-gcloud-packer/Dockerfile)
-  creates the
-  [docker Image](https://hub.docker.com/r/jeffdecola/go-gcloud-packer)
-  with at least these versions,
-  * ubuntu 18.04
-  * go 1.11
-    * Installed package "google.golang.org/appengine"
-  * gcloud SDK 240.0.0
-    * Installed google app engine go extension component
-  * packer 1.3.5
-d
-## RUN CONTAINER & GET BASH SHELL
+## USE VAGRANT BOXES - FOR DOCKER
 
-To run a docker container.
+I'm not sure I'm sold on this since I could just easily make a docker image
+using a Dockerfile.  So I'm not sure I see the real benefit of doing this.
+But here it is anyway.
+
+### ubuntu-1804-docker-container
+
+* Development Environment Goal - Run ubuntu 18.04 in a docker container
+* Using
+  [tknerr/baseimage-ubuntu-18.04](https://app.vagrantup.com/tknerr/boxes/baseimage-ubuntu-18.04)
+  Vagrant Box (for docker)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1804-docker-container/Vagrantfile)
+  to manage/configure this development environment
+
+To ssh onto running docker container,
 
 ```bash
-docker run --name go-gcloud-packer -dit jeffdecola/go-gcloud-packer
+docker exec -i -t jeffs-ubuntu-container /bin/bash
+vagrant docker-exec -it -- /bin/sh
 ```
 
-To get a bash shell inside a running container,
+Here is an illustration,
+
+![IMAGE - ubuntu-1804-docker-container - IMAGE](docs/pics/ubuntu-1804-docker-container.jpg)
+
+## USE VAGRANT BOXES - FOR VIRTUALBOX (WINDOWS)
+
+This is also nice if you have a lot of Virtual Machines and want to fire them up
+on another machine.  I love configuration files.
+
+### ubuntu-1604-virtualbox-vm
+
+* Development Environment Goal - Run ubuntu 16.04 in a VirtualBox VM (WINDOWS)
+* Using
+  [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64)
+  Vagrant Box (for virtualbox)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1604-virtualbox-vm/Vagrantfile)
+  to manage/configure this development environment
+
+To ssh onto this VM,
 
 ```bash
-docker exec -i -t go-gcloud-packer /bin/bash
+vagrant ssh
 ```
+
+A gui should also pop up.  User and Password is vagrant.
+
+Here is an illustration,
+
+![IMAGE - ubuntu-1604-virtualbox-vm - IMAGE](docs/pics/ubuntu-1604-virtualbox-vm.jpg)
+
+## CREATE VAGRANT BOX (FOR VIRTUALBOX ON WINDOWS) USING PACKER
+
+Packer is great at creating images, so lets create our own
+custom vagrant box using packer.
+
+### jeffs-ubuntu-1804-virtualbox-vm-box
+
+We will use a base image and add `htop` to it.
+
+I got this box creation from [serainville](https://github.com/serainville/packer_templates)
+and very slightly modified it.
+
+Now we have the box is `/box/jeffs-ubuntu-1804-virtualbox-vm-box.box`.
+
+Add to vagrant
+
+```bash
+vagrant add box --name "ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box" --force jeffs-ubuntu-1804-virtualbox-vm-box.box
+```
+
+Now use the box like normal.
+
+Here is an illustration,
+
+![IMAGE - jeffs-ubuntu-1804-virtualbox-vm-box - IMAGE](docs/pics/jeffs-ubuntu-1804-virtualbox-vm-box.jpg)
 
 ## UPDATE GITHUB WEBPAGE USING CONCOURSE (OPTIONAL)
 
 For fun, I use concourse to update
-[my-docker-image-builds GitHub Webpage](https://jeffdecola.github.io/my-docker-image-builds/)
+[my-vagrant-boxes GitHub Webpage](https://jeffdecola.github.io/my-vagrant-boxes/)
 and alert me of the changes via repo status and slack.
 
-A pipeline file [pipeline.yml](https://github.com/JeffDeCola/my-docker-image-builds/tree/master/ci/pipeline.yml)
+A pipeline file [pipeline.yml](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/ci/pipeline.yml)
 shows the entire ci flow. Visually, it looks like,
 
-![IMAGE - my-docker-image-builds concourse ci pipeline - IMAGE](docs/pics/my-docker-image-builds-pipeline.jpg)
+![IMAGE - my-vagrant-boxes concourse ci pipeline - IMAGE](docs/pics/my-vagrant-boxes-pipeline.jpg)
 
 The `jobs` and `tasks` are,
 
 * `job-readme-github-pages` runs task
-  [readme-github-pages.sh](https://github.com/JeffDeCola/my-docker-image-builds/tree/master/ci/scripts/readme-github-pages.sh).
+  [readme-github-pages.sh](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/ci/scripts/readme-github-pages.sh).
 
 The concourse `resources types` are,
 
-* `my-docker-image-builds` uses a resource type
+* `my-vagrant-boxes` uses a resource type
   [docker-image](https://hub.docker.com/r/concourse/git-resource/)
   to PULL a repo from github.
 * `resource-slack-alert` uses a resource type
