@@ -21,14 +21,6 @@ plugins:
     enabled: true
   shellcheck:
     enabled: true
-  gofmt:
-    enabled: true
-  golint:
-    enabled: true
-    config:
-      min_confidence: 0.9
-  govet:
-    enabled: true
 
 # exclude_patterns: Exclude files and/or directories from analysis
 # - <pattern>
