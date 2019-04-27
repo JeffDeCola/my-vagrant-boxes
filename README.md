@@ -31,6 +31,12 @@ But here it is anyway.
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1804-docker-container/Vagrantfile)
   to manage/configure this development environment
 
+To run enter directory and,
+
+```bash
+vagrant up
+```
+
 To ssh onto running docker container,
 
 ```bash
@@ -55,6 +61,12 @@ on another machine.  I love configuration files.
   Vagrant Box (for virtualbox)
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1604-virtualbox-vm/Vagrantfile)
   to manage/configure this development environment
+
+To run enter directory and,
+
+```bash
+vagrant up
+```
 
 To ssh onto this VM,
 
