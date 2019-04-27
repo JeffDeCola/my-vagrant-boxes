@@ -1,0 +1,14 @@
+# This will create a docker image on your machine from a vagrant box.
+Vagrant.configure(2) do |config|
+  config.vm.provider "docker" do |d|
+    d.image = "tknerr/baseimage-ubuntu:18.04"
+    d.has_ssh = true
+  end
+
+  # use shell and other provisioners as usual
+  config.vm.provision "shell", inline: "echo 'hello docker!'"
+end
+
+# Once you have the image I suggest
+# docker run --name docker-ubuntu -dit tknerr/baseimage-ubuntu:16.04
+# docker exec -i -t docker-ubuntu /bin/bash
