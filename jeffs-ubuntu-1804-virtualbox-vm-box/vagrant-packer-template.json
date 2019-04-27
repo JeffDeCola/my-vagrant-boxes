@@ -4,10 +4,7 @@
         "disk_size": "61440",
         "guest_os_type": "Ubuntu_64",
         "headless": "false",
-        "iso_urls": [
-            "iso/ubuntu-18.04-server-amd64.iso",
-            "http://cdimage.ubuntu.com/ubuntu/releases/bionic/release/ubuntu-18.04-server-amd64.iso"
-            ],
+        "iso_urls1": "iso/ubuntu-18.04.2-server-amd64.iso",
         "iso_checksum_type": "sha256",
         "iso_checksum": "a7f5c7b0cdd0e9560d78f1e47660e066353bb8a79eb78d1fc3f4ea62a07e6cbc"
     },
@@ -45,7 +42,9 @@
             "disk_size": "{{user `disk_size`}}",
             "guest_os_type": "{{user `guest_os_type`}}",
             "headless": "{{user `headless`}}",
-            "iso_url": "{{user `iso_urls`}}",
+            "iso_urls": [
+                "{{user `iso_urls1`}}"
+            ],
             "iso_checksum_type": "{{user `iso_checksum_type`}}",
             "iso_checksum": "{{user `iso_checksum`}}",
             "ssh_username": "vagrant",

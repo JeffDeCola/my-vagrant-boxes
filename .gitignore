@@ -8,3 +8,4 @@
 // Ignore Packer
 **/packer_cache/
 **/*.box
+**/*.iso
