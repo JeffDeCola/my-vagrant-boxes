@@ -1,41 +1,66 @@
 {
     "variables": {
-        "autounattend": "./answer_files/10/Autounattend.xml",
+        "vm_name": "jeffs-ubuntu-1804-virtualbox-vm-box",
         "disk_size": "61440",
-        "disk_type_id": "1",
+        "guest_os_type": "Ubuntu_64",
         "headless": "false",
-        "iso_url": "./iso/SW_DVD9_Win_Pro_Ent_Edu_N_10_1803_64BIT_English_-4_MLF_X21-87129.ISO",
+        "iso_urls": [
+            "iso/ubuntu-18.04-server-amd64.iso",
+            "http://cdimage.ubuntu.com/ubuntu/releases/bionic/release/ubuntu-18.04-server-amd64.iso"
+            ],
         "iso_checksum_type": "sha256",
-        "iso_checksum": "F38B0AEAE0756E01DCD9B1600DE62416E04AA963C72CEA30929141F54F1235B3",
-        "restart_timeout": "5m",
-        "vhv_enable": "false",
-        "winrm_timeout": "6h"
+        "iso_checksum": "a7f5c7b0cdd0e9560d78f1e47660e066353bb8a79eb78d1fc3f4ea62a07e6cbc"
     },
 
     "builders": [
         {   
-            "boot_command": "",
-            "boot_wait": "6m",
-            "communicator": "winrm",
-            "disk_size": "{{user `disk_size`}}",
-            "floppy_files": [
-              "{{user `autounattend`}}",
-              "./scripts/Install-Software.ps1"
-            ],
-            "guest_additions_mode": "disable",
-            "guest_os_type": "Windows10_64",
-            "headless": "{{user `headless`}}",
-            "iso_checksum": "{{user `iso_checksum`}}",
-            "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
-            "iso_checksum_type": "{{user `iso_checksum_type`}}",
-            "iso_url": "{{user `iso_url`}}",
             "type": "virtualbox-iso",
+            "vm_name": "{{user `vm_name`}}",
+            "boot_command": [
+                "<esc><wait>",
+                "<esc><wait>",
+                "<enter><wait>",
+                "/install/vmlinuz<wait>",
+                " auto<wait>",
+                " console-setup/ask_detect=false<wait>",
+                " console-setup/layoutcode=us<wait>",
+                " console-setup/modelcode=pc105<wait>",
+                " debconf/frontend=noninteractive<wait>",
+                " debian-installer=en_US<wait>",
+                " fb=false<wait>",
+                " initrd=/install/initrd.gz<wait>",
+                " kbd-chooser/method=us<wait>",
+                " keyboard-configuration/layout=USA<wait>",
+                " keyboard-configuration/variant=USA<wait>",
+                " locale=en_US<wait>",
+                " netcfg/get_domain=vm<wait>",
+                " netcfg/get_hostname=vagrant<wait>",
+                " grub-installer/bootdev=/dev/sda<wait>",
+                " noapic<wait>",
+                " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg<wait>",
+                " -- <wait>",
+                "<enter><wait>"
+            ],
+            "boot_wait": "10s",
+            "disk_size": "{{user `disk_size`}}",
+            "guest_os_type": "{{user `guest_os_type`}}",
+            "headless": "{{user `headless`}}",
+            "iso_url": "{{user `iso_urls`}}",
+            "iso_checksum_type": "{{user `iso_checksum_type`}}",
+            "iso_checksum": "{{user `iso_checksum`}}",
+            "ssh_username": "vagrant",
+            "ssh_password": "vagrant",
+            "ssh_port": 22,
+            "ssh_wait_timeout": "10000s",
+            "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
+            "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+            "virtualbox_version_file": ".vbox_version",
             "vboxmanage": [
               [
                 "modifyvm",
                 "{{.Name}}",
                 "--memory",
-                "6096"
+                "4096"
               ],
               [
                 "modifyvm",
@@ -43,11 +68,7 @@
                 "--cpus",
                 "4"
               ]
-            ],
-            "vm_name": "windows_10",
-            "winrm_password": "vagrant",
-            "winrm_timeout": "{{user `winrm_timeout`}}",
-            "winrm_username": "vagrant"
+            ]
         }
     ],
 
@@ -62,27 +83,18 @@
             "pause_before": "4s",
             "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E {{ .Path }}",
             "scripts": [
-                "./install-scripts/add-user-jeff.sh",
-                "./install-scripts/move-welcome-file.sh",
-                "./install-scripts/setup-github-ssh-keys.sh",
-                "./install-scripts/upgrade-system.sh",
+                "./install-scripts/init.sh",
                 "./install-scripts/install-packages.sh",
-                "./install-scripts/install-docker.sh",
-                "./install-scripts/install-go.sh",
-                "./install-scripts/pull-private-repos.sh",
-                "./install-scripts/install-service.sh",
-                "./install-scripts/enable-service-boot.sh",
-                "./install-scripts/enable-docker-container-boot.sh"
+                "./install-scripts/cleanup.sh"
             ]
         }
     ],
 
     "post-processors": [
         {
-            "keep_input_artifact": false,
-            "output": "ubuntu-18.04-{{.Provider}}.box",
             "type": "vagrant",
-            "vagrantfile_template": "vagrantfile-windows_10.template"
+            "compression_level": "8",
+            "output": "/output/{{user `vm_name`}}.box"
         }
     ]
 

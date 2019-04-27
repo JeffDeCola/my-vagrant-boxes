@@ -77,6 +77,8 @@ custom vagrant box using packer.
 
 We will use a base image and add htop to it.
 
+I got this box creation from [serainville](https://github.com/serainville/packer_templates)
+and very slightly modified it.
 
 ## UPDATE GITHUB WEBPAGE USING CONCOURSE (OPTIONAL)
 

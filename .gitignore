@@ -3,3 +3,8 @@
 
 // Ignore .vagrant
 **/.vagrant
+**/.log
+
+// Ignore Packer
+**/packer_cache/
+**/*.box

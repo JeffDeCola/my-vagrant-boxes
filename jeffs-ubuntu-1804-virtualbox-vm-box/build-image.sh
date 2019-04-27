@@ -28,15 +28,14 @@ then
     command="validate"
 else
     echo "Not validating - Lets build the image"
-    command="build -force"
+    # command="build -force"
+    command="build"
 fi
 echo " "
 
 echo "packer build command"
 packer $command \
-    -var "account_file=$GCP_JEFFS_APP_SERVICE_ACCOUNT_PATH" \
-    -var "project_id=$GCP_JEFFS_PROJECT_ID" \
-    gce-packer-template.json
+    vagrant-packer-template.json
 echo " "
 
 echo "************************************************************************"
