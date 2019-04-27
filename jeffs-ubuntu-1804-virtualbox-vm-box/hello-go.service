@@ -1,0 +1,16 @@
+[Unit]
+Description=Jeffs Playground
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/bin
+ExecStart=/root/bin/hello-go
+Restart=always
+User=root
+StandardOutput=syslog
+StandardError=syslog
+LimitNOFILE=49152
+
+[Install]
+WantedBy=multi-user.target

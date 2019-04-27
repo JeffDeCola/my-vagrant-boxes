@@ -8,7 +8,8 @@
 The goal is to create a common development environment._
 
 My
-[vagrant cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet).
+[vagrant cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet)
+has a great illustration of the following boxes.
 
 Search for vagrant boxes at
 [vagrant box search](https://app.vagrantup.com/boxes/search).
@@ -17,8 +18,9 @@ Search for vagrant boxes at
 
 ## USE VAGRANT BOXES - FOR DOCKER
 
-I mean, I get it, but I would just make a docker image with a docker
-file and have people use that.  Not a huge fan of this.
+I'm not sure I'm sold on this since I could just easily make a docker image
+using a Dockerfile.  So I'm not sure I see the real benefit of doing this.
+But here it is anyway.
 
 ### ubuntu-1804-docker-container
 
@@ -29,18 +31,25 @@ file and have people use that.  Not a huge fan of this.
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1804-docker-container/Vagrantfile)
   to manage/configure this development environment
 
-To ssh onto container,
+To ssh onto running docker container,
 
 ```bash
 docker exec -i -t jeffs-ubuntu-container /bin/bash
 vagrant docker-exec -it -- /bin/sh
 ```
 
+Here is an illustration,
+
+![IMAGE - ubuntu-1804-docker-container - IMAGE](docs/pics/ubuntu-1804-docker-container.jpg)
+
 ## USE VAGRANT BOXES - FOR VIRTUALBOX (WINDOWS)
+
+This is also nice if you have a lot of Virtual Machines and want to fire them up
+on another machine.  I love configuration files.
 
 ### ubuntu-1604-virtualbox-vm
 
-* Development Environment Goal - Run ubuntu 16.04 in a VirtualBox VM
+* Development Environment Goal - Run ubuntu 16.04 in a VirtualBox VM (WINDOWS)
 * Using
   [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64)
   Vagrant Box (for virtualbox)
@@ -53,11 +62,19 @@ To ssh onto this VM,
 vagrant ssh
 ```
 
-A gui should pop up.  User and Password is vagrant.
+A gui should also pop up.  User and Password is vagrant.
+
+Here is an illustration,
+
+![IMAGE - ubuntu-1604-virtualbox-vm - IMAGE](docs/pics/ubuntu-1604-virtualbox-vm.jpg)
 
 ## CREATE VAGRANT BOX (USING PACKER)
 
-tbd
+Packer is great at creating images, so lets create our own custom vagrant box.
+
+### jeffs-ubuntu-1804-virtualbox-vm-box
+
+
 
 ## UPDATE GITHUB WEBPAGE USING CONCOURSE (OPTIONAL)
 
