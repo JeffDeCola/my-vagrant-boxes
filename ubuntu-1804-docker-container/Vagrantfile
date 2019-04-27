@@ -1,13 +1,19 @@
 # This will run a provisioned docker container on your machine from a docker image.
-Vagrant.configure(2) do |config|
-    config.vm.provider "docker" do |d|
-        d.image = "tknerr/baseimage-ubuntu:18.04"
-        d.has_ssh = true
-        d.name = "jeffs-ubuntu-container"
+Vagrant.configure(2) do |jeffsconfig|
+
+  # CONFIGURE ON PROVIDER (DOCKER)
+    jeffsconfig.vm.provider "docker" do |jeffsdocker|
+        jeffsdocker.image = "tknerr/baseimage-ubuntu:18.04"
+        jeffsdocker.has_ssh = true
+        jeffsdocker.name = "jeffs-ubuntu-container"
     end
     
-    # use shell and other provisioners as usual
-    config.vm.provision "shell", inline: "sudo apt-get install htop"
+    # PROVISION
+    jeffsconfig.vm.provision "shell", inline: <<-SHELL
+        apt-get update
+        sudo apt-get install -y htop
+    SHELL
+
 end
 
 # Once you have the image you can

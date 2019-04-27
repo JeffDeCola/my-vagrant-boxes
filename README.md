@@ -20,25 +20,44 @@ Search for vagrant boxes at
 I mean, I get it, but I would just make a docker image with a docker
 file and have people use that.  Not a huge fan of this.
 
-* `ubuntu-1804-docker-container`
-  * Development Environment Goal - Run ubuntu 18.04 in a docker container
-  * Using
-    [tknerr/baseimage-ubuntu-18.04](https://app.vagrantup.com/tknerr/boxes/baseimage-ubuntu-18.04)
-    Vagrant Box (for docker)
-  * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1804-docker-container/Vagrantfile)
-    to manage/configure this development environment.
+### ubuntu-1804-docker-container
 
-## USE VAGRANT BOXES - FOR VIRTUALBOX
+* Development Environment Goal - Run ubuntu 18.04 in a docker container
+* Using
+  [tknerr/baseimage-ubuntu-18.04](https://app.vagrantup.com/tknerr/boxes/baseimage-ubuntu-18.04)
+  Vagrant Box (for docker)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1804-docker-container/Vagrantfile)
+  to manage/configure this development environment
 
-* `ubuntu-1604-virtualbox-vm`
-  * Development Environment Goal - Run ubuntu 16.04 in a VirtualBox VM
-  * Using
-    [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64)
-    Vagrant Box (for virtualbox)
-  * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1604-virtualbox-vm/Vagrantfile)
-    to manage/configure this development environment.
+To ssh onto container,
 
-## CREATE VAGRANT BOX
+```bash
+docker exec -i -t jeffs-ubuntu-container /bin/bash
+vagrant docker-exec -it -- /bin/sh
+```
+
+## USE VAGRANT BOXES - FOR VIRTUALBOX (WINDOWS)
+
+### ubuntu-1604-virtualbox-vm
+
+* Development Environment Goal - Run ubuntu 16.04 in a VirtualBox VM
+* Using
+  [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64)
+  Vagrant Box (for virtualbox)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1604-virtualbox-vm/Vagrantfile)
+  to manage/configure this development environment
+
+To ssh onto this VM,
+
+```bash
+vagrant ssh
+```
+
+A gui should pop up.  User and Password is vagrant.
+
+## CREATE VAGRANT BOX (USING PACKER)
+
+tbd
 
 ## UPDATE GITHUB WEBPAGE USING CONCOURSE (OPTIONAL)
 

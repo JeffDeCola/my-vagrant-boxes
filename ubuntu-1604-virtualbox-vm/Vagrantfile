@@ -1,7 +1,24 @@
 # This will create a virtualbox vm on your machine from a vagrant box.
-Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/xenial64"
+Vagrant.configure(2) do |jeffsconfig|
+  
+    jeffsconfig.vm.box = "ubuntu/xenial64"
 
-  # use shell and other provisioners as usual
-  config.vm.provision "shell", inline: "sudo apt-get install htop"
+    # CONFIGURE ON PROVIDER (WINDOWS VIRTUALBOX)
+    jeffsconfig.vm.provider "virtualbox" do |jeffsvb|
+        jeffsvb.name = 'ubuntu-1604-virtualbox-vm'
+        jeffsvb.gui = true  # turn on the graphic window
+        jeffsvb.memory = 8192
+        jeffsvb.cpus = 2
+        jeffsvb.customize ["modifyvm", :id, "--groups", "/From Vagrant Up"]
+        jeffsvb.customize ["modifyvm", :id, "--vram", "128"] 
+        # jeffsvb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+        # jeffsvb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+    end
+
+    # PROVISION
+    jeffsconfig.vm.provision "shell", inline: <<-SHELL
+        apt-get update
+        sudo apt-get install -y htop
+    SHELL
+  
 end
