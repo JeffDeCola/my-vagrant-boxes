@@ -4,7 +4,8 @@
 [![Issue Count](https://codeclimate.com/github/JeffDeCola/my-vagrant-boxes/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/my-vagrant-boxes/issues)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
-`my-vagrant-boxes` _is a place for me to use vagrant boxes and create vagrant boxes._
+`my-vagrant-boxes` _is a place for me to use vagrant boxes and create vagrant boxes.
+The goal is to create a common development environment._
 
 My
 [vagrant cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet).
@@ -14,15 +15,25 @@ Search for vagrant boxes at
 
 [GitHub Webpage](https://jeffdecola.github.io/my-vagrant-boxes/).
 
-## USE VAGRANT BOXES
+## USE VAGRANT BOXES - FOR DOCKER
 
-* ubuntu-docker-container
-  * Goal - Run ubuntu 18.04 in a docker container
+* `ubuntu-1804-docker-container`
+  * Development Environment Goal - Run ubuntu 18.04 in a docker container
   * Using
-    [tknerr/baseimage-ubuntu-16.04](https://app.vagrantup.com/tknerr/boxes/baseimage-ubuntu-16.04)
+    [tknerr/baseimage-ubuntu-18.04](https://app.vagrantup.com/tknerr/boxes/baseimage-ubuntu-18.04)
     Vagrant Box (for docker)
-  * [Vagrantfile]()
-* ubuntu-VirtualBox-VM  
+  * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1804-docker-container/Vagrantfile)
+    to manage/configure this development environment.
+
+## USE VAGRANT BOXES - FOR VIRTUALBOX
+
+* `ubuntu-1604-virtualbox-vm`
+  * Development Environment Goal - Run ubuntu 16.04 in a VirtualBox VM
+  * Using
+    [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64)
+    Vagrant Box (for virtualbox)
+  * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1604-virtualbox-vm/Vagrantfile)
+    to manage/configure this development environment.
 
 ## CREATE VAGRANT BOX
 
