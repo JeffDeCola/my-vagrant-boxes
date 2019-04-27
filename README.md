@@ -17,6 +17,9 @@ Search for vagrant boxes at
 
 ## USE VAGRANT BOXES - FOR DOCKER
 
+I mean, I get it, but I would just make a docker image with a docker
+file and have people use that.  Not a huge fan of this.
+
 * `ubuntu-1804-docker-container`
   * Development Environment Goal - Run ubuntu 18.04 in a docker container
   * Using

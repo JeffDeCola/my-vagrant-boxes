@@ -1,4 +1,4 @@
-# This will create a docker image on your machine from a vagrant box.
+# This will run a provisioned docker container on your machine from a docker image.
 Vagrant.configure(2) do |config|
     config.vm.provider "docker" do |d|
         d.image = "tknerr/baseimage-ubuntu:18.04"
