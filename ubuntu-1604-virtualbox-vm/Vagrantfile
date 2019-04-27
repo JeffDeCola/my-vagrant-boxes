@@ -1,0 +1,7 @@
+# This will create a virtualbox vm on your machine from a vagrant box.
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial64"
+
+  # use shell and other provisioners as usual
+  config.vm.provision "shell", inline: "sudo apt-get install htop"
+end
