@@ -31,7 +31,7 @@ But here it is anyway.
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1804-docker-container/Vagrantfile)
   to manage/configure this development environment
 
-To run enter directory and,
+To run enter directory,
 
 ```bash
 vagrant up
@@ -62,7 +62,7 @@ on another machine.  I love configuration files.
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1604-virtualbox-vm/Vagrantfile)
   to manage/configure this development environment
 
-To run enter directory and,
+To run enter directory,
 
 ```bash
 vagrant up
@@ -91,6 +91,13 @@ We will use a base image and add `htop` to it.
 
 I got this box creation from [serainville](https://github.com/serainville/packer_templates)
 and very slightly modified it.
+
+
+To run enter directory,
+
+```bash
+packer build vagrant-packer-template.json
+```
 
 Now we have the box is `/box/jeffs-ubuntu-1804-virtualbox-vm-box.box`.
 
