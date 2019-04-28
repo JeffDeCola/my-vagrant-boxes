@@ -4,7 +4,7 @@
 echo " "
 echo "************************************************************************"
 echo "****************************************** install-packages.sh (START) *"
-echo "You are root in /home/packer"
+echo "You are root in /home/vagrant"
 echo " "
 whoami
 pwd
