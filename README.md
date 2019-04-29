@@ -108,7 +108,7 @@ Using the box we created below,
 * Development Environment Goal - Run ubuntu 18.04 in a VirtualBox VM (WINDOWS)
 * Using
   `ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box`
-  Vagrant Box (for virtualbox)
+  Vagrant Box (for virtualbox) that was created below.
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/jeffs-ubuntu-1804-virtualbox-vm/Vagrantfile)
   to manage/configure this development environment
 
@@ -132,6 +132,13 @@ Packer is great at creating images, so lets create our own
 custom vagrant box using packer.
 
 ### jeffs-ubuntu-1804-virtualbox-vm-box
+
+* Goal - Create a vagrant box of ubuntu 18.04
+* Using
+  `iso/ubuntu-18.04.2-server-amd64.iso`
+  ubuntu 18.04 .iso file.
+* [Packer template](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/jeffs-ubuntu-1804-virtualbox-vm-box/vagrant-packer-template.json)
+  to manage/configure this development environment
 
 We will use a base image and add `htop` to it.
 
