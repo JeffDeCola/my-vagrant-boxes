@@ -79,11 +79,18 @@
             "destination": "/tmp/welcome.txt"
         },
         {
+            "type": "file",
+            "source": "./install-files/vagrant-insecure-public-key.txt",
+            "destination": "/tmp/vagrant-insecure-public-key.txt"
+        },
+        {
             "type": "shell",
             "pause_before": "4s",
             "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
             "scripts": [
                 "./install-scripts/init.sh",
+                "./install-scripts/move-welcome-file.sh",
+                "./install-scripts/move-vagrant-insecure-public-key.sh",
                 "./install-scripts/install-packages.sh",
                 "./install-scripts/cleanup.sh"
             ]
