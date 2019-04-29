@@ -16,6 +16,18 @@ Search for vagrant boxes at
 
 [GitHub Webpage](https://jeffdecola.github.io/my-vagrant-boxes/).
 
+## OVERVIEW OF THIS CHEAT SHEET
+
+* USE VAGRANT BOXES - FOR DOCKER
+  * [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1804-docker-container)
+
+* USE VAGRANT BOXES - FOR VIRTUALBOX (WINDOWS)
+  * [ubuntu-1604-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1604-virtualbox-vm)
+  * [jeffs-ubuntu-1804-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm)
+
+* CREATE VAGRANT BOXES (FOR VIRTUALBOX ON WINDOWS) USING PACKER
+  * [jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm-box)
+
 ## USE VAGRANT BOXES - FOR DOCKER
 
 I'm not sure I'm sold on this since I could just easily make a docker image
@@ -114,7 +126,7 @@ vagrant ssh
 
 A gui should also pop up.  User and password is vagrant.
 
-## CREATE VAGRANT BOX (FOR VIRTUALBOX ON WINDOWS) USING PACKER
+## CREATE VAGRANT BOXES (FOR VIRTUALBOX ON WINDOWS) USING PACKER
 
 Packer is great at creating images, so lets create our own
 custom vagrant box using packer.
