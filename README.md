@@ -74,11 +74,36 @@ To ssh onto this VM,
 vagrant ssh
 ```
 
-A gui should also pop up.  User and Password is vagrant.
+A gui should also pop up.  User and password is vagrant.
 
 Here is an illustration,
 
 ![IMAGE - ubuntu-1604-virtualbox-vm - IMAGE](docs/pics/ubuntu-1604-virtualbox-vm.jpg)
+
+### jeffs-ubuntu-1804-virtualbox-vm
+
+Using the box we created below,
+
+* Development Environment Goal - Run ubuntu 18.04 in a VirtualBox VM (WINDOWS)
+* Using
+  `ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box`
+  Vagrant Box (for virtualbox)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/jeffs-ubuntu-1804-virtualbox-vm/Vagrantfile)
+  to manage/configure this development environment
+
+To run enter directory,
+
+```bash
+vagrant up
+```
+
+To ssh onto this VM,
+
+```bash
+vagrant ssh
+```
+
+A gui should also pop up.  User and password is vagrant.
 
 ## CREATE VAGRANT BOX (FOR VIRTUALBOX ON WINDOWS) USING PACKER
 
@@ -92,7 +117,6 @@ We will use a base image and add `htop` to it.
 I got this box creation from [serainville](https://github.com/serainville/packer_templates)
 and very slightly modified it.
 
-
 To run enter directory,
 
 ```bash
@@ -104,12 +128,13 @@ Now we have the box is `/box/jeffs-ubuntu-1804-virtualbox-vm-box.box`.
 Add to vagrant
 
 ```bash
-vagrant add box --name "ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box" --force jeffs-ubuntu-1804-virtualbox-vm-box.box
+vagrant box add --name "ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box" --force jeffs-ubuntu-1804-virtualbox-vm-box.box
+vagrant box list
 ```
 
 Now use the box like normal.
 
-Here is an illustration,
+Here is an illustration of packer creating a vagrant box (.box) for VirtualBox.
 
 ![IMAGE - jeffs-ubuntu-1804-virtualbox-vm-box - IMAGE](docs/pics/jeffs-ubuntu-1804-virtualbox-vm-box.jpg)
 
