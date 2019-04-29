@@ -1,9 +1,9 @@
 #!/bin/bash -e
-# jeffs-ubuntu-1804-virtualbox-vm-box install-packages.sh
+# jeffs-ubuntu-1804-virtualbox-vm-box init.sh
 
 echo " "
 echo "************************************************************************"
-echo "****************************************** install-packages.sh (START) *"
+echo "****************************************************** init.sh (START) *"
 echo "You are root in /home/vagrant"
 echo " "
 whoami
@@ -20,6 +20,6 @@ echo 'APT::Periodic::Enable "0";' >> /etc/apt/apt.conf.d/10periodic
 apt update
 apt upgrade -y
 
-echo "******************************************** install-packages.sh (END) *"
+echo "******************************************************** init.sh (END) *"
 echo "************************************************************************"
 echo " "

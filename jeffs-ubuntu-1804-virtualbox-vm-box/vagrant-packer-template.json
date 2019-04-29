@@ -93,8 +93,8 @@
     "post-processors": [
         {
             "type": "vagrant",
-            "compression_level": "8",
-            "output": "/box/{{user `vm_name`}}.box"
+            "compression_level": "5",
+            "output": "box/{{user `vm_name`}}.box"
         }
     ]
 
