@@ -9,10 +9,12 @@ Vagrant.configure(2) do |jeffsconfig|
     # Don't use shared mount folder (You would need guest additions to do this)    
     jeffsconfig.vm.synced_folder '.', '/vagrant', disabled: true
 
-    # Place the vagrant insecure public key in ~/.ssh/authorized_keys
+    # Will not created .ssh key pairs.
+    # You can use insecure public key you already placed in ~/.ssh/authorized_keys
     # This is so we can ssh with another ssh client using
     # vagrant insecure private keys ~/.vagrant.d/insecure_private_key
     jeffsconfig.ssh.insert_key = false 
+    jeffsconfig.ssh.private_key_path = ['~/.vagrant.d/insecure_private_key']
 
     jeffsconfig.vm.provider "virtualbox" do |jeffsvb|
         jeffsvb.name = 'jeffs-ubuntu-1804-virtualbox-vm'
