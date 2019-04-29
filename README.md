@@ -44,7 +44,7 @@ docker exec -i -t jeffs-ubuntu-container /bin/bash
 vagrant docker-exec -it -- /bin/sh
 ```
 
-Here is an illustration,
+Here is an illustration of what we did,
 
 ![IMAGE - ubuntu-1804-docker-container - IMAGE](docs/pics/ubuntu-1804-docker-container.jpg)
 
@@ -74,9 +74,18 @@ To ssh onto this VM,
 vagrant ssh
 ```
 
+We are also able to use another ssh client because we are using
+vagrant insecure keys. We have the public key in `~/.vagrant.d`.
+And we places the private key on the box in `~/.ssh/authorized_keys`
+(See Vagrantfile). Hence,
+
+```bash
+ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
+```
+
 A gui should also pop up.  User and password is vagrant.
 
-Here is an illustration,
+Here is an illustration of what we did,
 
 ![IMAGE - ubuntu-1604-virtualbox-vm - IMAGE](docs/pics/ubuntu-1604-virtualbox-vm.jpg)
 
@@ -123,18 +132,19 @@ To run enter directory,
 packer build vagrant-packer-template.json
 ```
 
-Now we have the box is `/box/jeffs-ubuntu-1804-virtualbox-vm-box.box`.
+Now we have the box in `/box/jeffs-ubuntu-1804-virtualbox-vm-box.box`.
 
-Add to vagrant
+Add/list/remove box to/from vagrant,
 
 ```bash
 vagrant box add --name "ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box" --force jeffs-ubuntu-1804-virtualbox-vm-box.box
 vagrant box list
+vagrant box remove ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box
 ```
 
 Now use the box like normal.
 
-Here is an illustration of packer creating a vagrant box (.box) for VirtualBox.
+Here is an illustration of what we did,
 
 ![IMAGE - jeffs-ubuntu-1804-virtualbox-vm-box - IMAGE](docs/pics/jeffs-ubuntu-1804-virtualbox-vm-box.jpg)
 
