@@ -87,8 +87,8 @@ vagrant ssh
 ```
 
 We are also able to use another ssh client because we are using
-vagrant insecure keys. We have the public key in `~/.vagrant.d`.
-And we places the private key on the box in `~/.ssh/authorized_keys`
+vagrant insecure keys. We have the private key in `~/.vagrant.d`.
+And we places the public key on the box in `~/.ssh/authorized_keys`
 (See Vagrantfile). Hence,
 
 ```bash
@@ -122,6 +122,15 @@ To ssh onto this VM,
 
 ```bash
 vagrant ssh
+```
+
+We are also able to use another ssh client because we are using
+vagrant insecure keys. We have the private key in `~/.vagrant.d`.
+And we places the public key on the box in `~/.ssh/authorized_keys`
+(See Vagrantfile). Hence,
+
+```bash
+ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
 ```
 
 A gui should also pop up.  User and password is vagrant.
