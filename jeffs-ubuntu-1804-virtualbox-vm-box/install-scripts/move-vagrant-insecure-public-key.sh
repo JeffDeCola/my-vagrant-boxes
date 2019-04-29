@@ -14,8 +14,8 @@ echo "Make /vagrant/.ssh"
 [ -d /home/vagrant/.ssh ] || mkdir /home/vagrant/.ssh
 echo " "
 
-echo "chmod 700 /home/vagrant/.ssh"
-chmod 700 /home/vagrant/.ssh
+echo "chmod 777 /home/vagrant/.ssh"
+chmod 777 /home/vagrant/.ssh
 echo " "
 
 echo "mv /tmp/vagrant-insecure-public-key.txt /vagrant/.ssh/authorized_keys"
