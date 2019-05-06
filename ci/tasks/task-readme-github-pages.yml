@@ -15,5 +15,5 @@ outputs:
 - name: my-vagrant-boxes-updated
 
 run:
-  path: ./my-docker-image-builds/ci/scripts/readme-github-pages.sh
+  path: ./my-vagrant-boxes/ci/scripts/readme-github-pages.sh
   # args: [-debug]
