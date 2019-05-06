@@ -1,28 +1,28 @@
-# my-docker-image-builds pipeline.yml
+# my-vagrant-boxes pipeline.yml
 
 jobs:
 
 - name: job-readme-github-pages
   plan:
-  - get: my-docker-image-builds
+  - get: my-vagrant-boxes
     trigger: true
   - put: resource-slack-alert
     params:
       channel: '#jeff-builds'
-      text: "From my-docker-image-builds: STARTED job-readme-github-pages in concourse ci."
+      text: "From my-vagrant-boxes: STARTED job-readme-github-pages in concourse ci."
   - put: resource-repo-status
     params: { state: "pending", description: "STARTED job-readme-github-pages in concourse ci.", commit: "my-docker-image-builds" }
   - task: task-readme-github-pages
-    file: my-docker-image-builds/ci/tasks/task-readme-github-pages.yml
+    file: my-vagrant-boxes/ci/tasks/task-readme-github-pages.yml
     on_success:
       do:
-      - put: my-docker-image-builds
+      - put: my-vagrant-boxes
         params:
-          repository: my-docker-image-builds-updated  
+          repository: my-vagrant-boxes-updated  
       - put: resource-slack-alert
         params:
           channel: '#jeff-builds'
-          text: "From my-docker-image-builds: PASSED job-readme-github-pages in concourse ci."
+          text: "From my-vagrant-boxes: PASSED job-readme-github-pages in concourse ci."
       - put: resource-repo-status
         params: { state: "success", description: "PASSED job-readme-github-pages in concourse ci", commit: "my-docker-image-builds" }
     on_failure:
@@ -30,7 +30,7 @@ jobs:
       - put: resource-slack-alert
         params:
           channel: '#jeff-builds'
-          text: "From my-docker-image-builds: FAILED job-readme-github-pages in concourse ci."
+          text: "From my-vagrant-boxes: FAILED job-readme-github-pages in concourse ci."
       - put: resource-repo-status
         params: { state: "failure", description: "FAILED job-readme-github-pages in concourse ci", commit: "my-docker-image-builds" }
 
@@ -49,7 +49,7 @@ resource_types:
 
 resources:
 
-- name: my-docker-image-builds
+- name: my-vagrant-boxes
   type: git
   source:
     #uri: https://github.com/jeffdecola/my-docker-image-builds

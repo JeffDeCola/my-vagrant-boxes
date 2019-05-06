@@ -1,5 +1,5 @@
 #!/bin/sh
-# my-docker-image-builds readme-github-pages.sh
+# my-vagrant-boxes readme-github-pages.sh
 
 echo " "
 
@@ -34,12 +34,12 @@ echo "List whats in the current directory"
 ls -la
 echo " "
 
-echo "git clone my-docker-image-builds to my-docker-image-builds-updated"
-git clone my-docker-image-builds my-docker-image-builds-updated
+echo "git clone my-vagrant-boxes to my-vagrant-boxes-updated"
+git clone my-vagrant-boxes my-vagrant-boxes-updated
 echo " "
 
-echo "cd my-docker-image-builds-updated"
-cd my-docker-image-builds-updated
+echo "cd my-vagrant-boxes-updated"
+cd my-vagrant-boxes-updated
 echo " "
 
 echo "List whats in the current directory"
