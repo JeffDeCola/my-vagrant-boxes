@@ -24,7 +24,7 @@ Search for vagrant boxes at
 * USE VAGRANT BOXES - FOR VIRTUALBOX (WINDOWS)
   * [ubuntu-1604-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1604-virtualbox-vm)
   * [jeffs-ubuntu-1804-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm)
-  * [concourse-lite-vm](https://github.com/JeffDeCola/my-vagrant-boxes#concorse-lite-vm)
+  * [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes#concourse-lite-321-vm)
 
 * CREATE VAGRANT BOXES (FOR VIRTUALBOX ON WINDOWS) USING PACKER
   * [jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm-box)
@@ -90,7 +90,8 @@ vagrant ssh
 We are also able to use another ssh client because we are using
 vagrant insecure keys. We have the private key in `~/.vagrant.d`.
 And we places the public key on the box in `~/.ssh/authorized_keys`
-(See Vagrantfile). Hence,
+(See Vagrantfile). Also, you may have to delete previous fingerprints
+in your ~/.ssh/known_hosts. Hence,
 
 ```bash
 ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
@@ -128,7 +129,8 @@ vagrant ssh
 We are also able to use another ssh client because we are using
 vagrant insecure keys. We have the private key in `~/.vagrant.d`.
 And we places the public key on the box in `~/.ssh/authorized_keys`
-(See Vagrantfile). Hence,
+(See Vagrantfile). Also, you may have to delete previous fingerprints
+in your ~/.ssh/known_hosts. Hence,
 
 ```bash
 ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
@@ -175,7 +177,7 @@ You can check it out on your machine
 [192.168.100.4:8080](http://192.168.100.4:8080/).
 
 Refer to my cheat sheet on concourse
-[here] (https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/operations-tools/continuous-integration-continuous-deployment/concourse-cheat-sheet)
+[here](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/operations-tools/continuous-integration-continuous-deployment/concourse-cheat-sheet).
 
 ## CREATE VAGRANT BOXES (FOR VIRTUALBOX ON WINDOWS) USING PACKER
 
