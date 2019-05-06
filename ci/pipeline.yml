@@ -11,7 +11,7 @@ jobs:
       channel: '#jeff-builds'
       text: "From my-vagrant-boxes: STARTED job-readme-github-pages in concourse ci."
   - put: resource-repo-status
-    params: { state: "pending", description: "STARTED job-readme-github-pages in concourse ci.", commit: "my-docker-image-builds" }
+    params: { state: "pending", description: "STARTED job-readme-github-pages in concourse ci.", commit: "my-vagrant-boxes" }
   - task: task-readme-github-pages
     file: my-vagrant-boxes/ci/tasks/task-readme-github-pages.yml
     on_success:
@@ -24,7 +24,7 @@ jobs:
           channel: '#jeff-builds'
           text: "From my-vagrant-boxes: PASSED job-readme-github-pages in concourse ci."
       - put: resource-repo-status
-        params: { state: "success", description: "PASSED job-readme-github-pages in concourse ci", commit: "my-docker-image-builds" }
+        params: { state: "success", description: "PASSED job-readme-github-pages in concourse ci", commit: "my-vagrant-boxes" }
     on_failure:
       do:
       - put: resource-slack-alert
@@ -32,7 +32,7 @@ jobs:
           channel: '#jeff-builds'
           text: "From my-vagrant-boxes: FAILED job-readme-github-pages in concourse ci."
       - put: resource-repo-status
-        params: { state: "failure", description: "FAILED job-readme-github-pages in concourse ci", commit: "my-docker-image-builds" }
+        params: { state: "failure", description: "FAILED job-readme-github-pages in concourse ci", commit: "my-vagrant-boxes" }
 
 resource_types:
 
@@ -52,8 +52,8 @@ resources:
 - name: my-vagrant-boxes
   type: git
   source:
-    #uri: https://github.com/jeffdecola/my-docker-image-builds
-    uri: git@github.com:jeffdecola/my-docker-image-builds.git
+    #uri: https://github.com/jeffdecola/my-vagrant-boxes
+    uri: git@github.com:jeffdecola/my-vagrant-boxes.git
     branch: master
     private_key: {{git_private_key}}
 - name: resource-slack-alert
@@ -63,5 +63,5 @@ resources:
 - name: resource-repo-status 
   type: github-status
   source:
-    repository: jeffdecola/my-docker-image-builds 
+    repository: jeffdecola/my-vagrant-boxes 
     access_token: {{repo_github_token}}
