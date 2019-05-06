@@ -145,7 +145,7 @@ Using the box we created below,
 * Development Environment Goal - Run concourse 3.2.1 in a VirtualBox VM (WINDOWS)
 * Using
   [concourse/lite](https://app.vagrantup.com/concourse/boxes/lite)
-  Vagrant Box (for virtualbox) that was created below.
+  Vagrant Box (for virtualbox).
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/concourse-lite-321-vm/Vagrantfile)
   to manage/configure this development environment
 
