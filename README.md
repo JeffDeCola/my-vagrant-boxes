@@ -7,6 +7,19 @@
 `my-vagrant-boxes` _is a place for me to use vagrant boxes and create vagrant boxes.
 The goal is to create a common development environment._
 
+tl;dr,
+
+```bash
+# RUN
+vagrant up
+vagrant ssh
+ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
+# LIST/ADD/REMOVE VAGRANT BOXES
+vagrant box list
+vagrant box add --name "ubuntu/jeffs-ubuntu" --force ubuntu-box.box
+vagrant box remove ubuntu/jeffs-ubuntu
+```
+
 My
 [vagrant cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet)
 has a great illustration of the following boxes.
