@@ -20,6 +20,15 @@ vagrant box add --name "ubuntu/jeffs-ubuntu" --force ubuntu-box.box
 vagrant box remove ubuntu/jeffs-ubuntu
 ```
 
+* [USE VAGRANT BOXES - FOR DOCKER](https://github.com/JeffDeCola/my-vagrant-boxes#use-vagrant-boxes---for-docker)
+  * [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1804-docker-container)
+* [USE VAGRANT BOXES - FOR VIRTUALBOX (WINDOWS)](https://github.com/JeffDeCola/my-vagrant-boxes#use-vagrant-boxes---for-virtualbox-windows)
+  * [ubuntu-1604-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1604-virtualbox-vm)
+  * [jeffs-ubuntu-1804-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm)
+  * [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes#concourse-lite-321-vm)
+* [CREATE VAGRANT BOXES (FOR VIRTUALBOX ON WINDOWS) USING PACKER](https://github.com/JeffDeCola/my-vagrant-boxes#create-vagrant-boxes-for-virtualbox-on-windows-using-packer)
+  * [jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm-box)
+
 My
 [vagrant cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet)
 has a great illustration of the following boxes.
@@ -28,19 +37,6 @@ Search for vagrant boxes at
 [vagrant box search](https://app.vagrantup.com/boxes/search).
 
 [GitHub Webpage](https://jeffdecola.github.io/my-vagrant-boxes/).
-
-## OVERVIEW OF THIS CHEAT SHEET
-
-* USE VAGRANT BOXES - FOR DOCKER
-  * [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1804-docker-container)
-
-* USE VAGRANT BOXES - FOR VIRTUALBOX (WINDOWS)
-  * [ubuntu-1604-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1604-virtualbox-vm)
-  * [jeffs-ubuntu-1804-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm)
-  * [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes#concourse-lite-321-vm)
-
-* CREATE VAGRANT BOXES (FOR VIRTUALBOX ON WINDOWS) USING PACKER
-  * [jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm-box)
 
 ## USE VAGRANT BOXES - FOR DOCKER
 
