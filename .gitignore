@@ -1,11 +1,15 @@
 // CONCOURSE
 .credentials.yml
 
-// Ignore all binaries, but not build.sh
-**/bin/hello-go
+// Ignore .vagrant
+**/.vagrant
+**/.log
 
-// Ignore test coverage
-**/test/test_coverage.txt
+**/ubuntu-1604-virtualbox-vm/*.log
 
-// Ignore binary used for build
-**/build-push/hello-go
+// Ignore Packer
+**/packer_cache
+**/*.box
+**/*.iso
+**/*.iso.lock
+**/*.vdi

@@ -1,0 +1,25 @@
+# This will run a provisioned docker container on your machine from a docker image.
+Vagrant.configure(2) do |jeffsconfig|
+
+    jeffsconfig.vm.provider "docker" do |jeffsdocker|
+
+        # STEP 1 - GET BASE BOX (IMAGE)
+        jeffsdocker.image = "tknerr/baseimage-ubuntu:18.04"
+
+        # STEP 2 - CONFIGURE ON PROVIDER (DOCKER)
+        jeffsdocker.has_ssh = true
+        jeffsdocker.name = "jeffs-ubuntu-container"
+
+    end
+    
+    # STEP 3 - PROVISION
+    jeffsconfig.vm.provision "shell", inline: <<-SHELL
+        apt-get update
+        sudo apt-get install -y htop
+    SHELL
+
+end
+
+# Once you have the image you can
+# docker exec -i -t jeffs-ubuntu-container /bin/bash
+# vagrant docker-exec -it -- /bin/sh
