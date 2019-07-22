@@ -1,6 +1,4 @@
 
-# USE VAGRANT BOXES
-
 * ubuntu-docker-container
   * Run an ubuntu 18.04 in a docker container
   * Use
@@ -9,6 +7,112 @@
  
 
 ## CREATE VAGRANT BOX
+
+
+### ubuntu-1604-virtualbox-vm
+
+* Development Environment Goal - Run ubuntu 16.04 in a VirtualBox VM (WINDOWS)
+* Using
+  [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64)
+  Vagrant Box (for virtualbox)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1604-virtualbox-vm/Vagrantfile)
+  to manage/configure this development environment
+
+To run enter directory,
+
+```bash
+vagrant up
+```
+
+To ssh onto this VM,
+
+```bash
+vagrant ssh
+```
+
+We are also able to use another ssh client because we are using
+vagrant insecure keys. We have the private key in `~/.vagrant.d`.
+And we places the public key on the box in `~/.ssh/authorized_keys`
+(See Vagrantfile). Also, you may have to delete previous fingerprints
+in your ~/.ssh/known_hosts. Hence,
+
+```bash
+ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
+```
+
+A gui should also pop up.  User and password is vagrant.
+
+Here is an illustration of what we did,
+
+![IMAGE - ubuntu-1604-virtualbox-vm - IMAGE](pics/ubuntu-1604-virtualbox-vm.jpg)
+
+### jeffs-ubuntu-1804-virtualbox-vm
+
+Using the box we created below,
+
+* Development Environment Goal - Run ubuntu 18.04 in a VirtualBox VM (WINDOWS)
+* Using
+  [ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm-box)
+  Vagrant Box (for virtualbox) that was created below.
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/jeffs-ubuntu-1804-virtualbox-vm/Vagrantfile)
+  to manage/configure this development environment
+
+To run enter directory,
+
+```bash
+vagrant up
+```
+
+To ssh onto this VM,
+
+```bash
+vagrant ssh
+```
+
+We are also able to use another ssh client because we are using
+vagrant insecure keys. We have the private key in `~/.vagrant.d`.
+And we places the public key on the box in `~/.ssh/authorized_keys`
+(See Vagrantfile). Also, you may have to delete previous fingerprints
+in your ~/.ssh/known_hosts. Hence,
+
+```bash
+ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
+```
+
+A gui should also pop up.  User and password is vagrant.
+
+### concourse-lite-321-vm
+
+Using the box we created below,
+
+* Development Environment Goal - Run concourse 3.2.1 in a VirtualBox VM (WINDOWS)
+* Using
+  [concourse/lite](https://app.vagrantup.com/concourse/boxes/lite)
+  Vagrant Box (for virtualbox) that was created below.
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/concourse-lite-321-vm/Vagrantfile)
+  to manage/configure this development environment
+
+To run enter directory,
+
+```bash
+vagrant up
+```
+
+To ssh onto this VM,
+
+```bash
+vagrant ssh
+```
+
+We are also able to use another ssh client because we are using
+vagrant insecure keys. We have the private key in `~/.vagrant.d`.
+And we places the public key on the box in `~/.ssh/authorized_keys`
+(See Vagrantfile). Also, you may have to delete previous fingerprints
+in your ~/.ssh/known_hosts. Hence,
+
+```bash
+ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
+```
 
 
 A gui should also pop up.  User and password is vagrant.
