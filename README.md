@@ -4,9 +4,6 @@
 [![Issue Count](https://codeclimate.com/github/JeffDeCola/my-vagrant-boxes/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/my-vagrant-boxes/issues)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
-<<<<<<< HEAD
-`my-vagrant-boxes` _is a place for me to use vagrant boxes and create vagrant boxes._
-=======
 `my-vagrant-boxes` _is a place for me to use vagrant boxes and create vagrant boxes.
 The goal is to create a common development environment._
 
@@ -35,27 +32,10 @@ vagrant box remove ubuntu/jeffs-ubuntu
 My
 [vagrant cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet)
 has a great illustration of the following boxes.
->>>>>>> bcf434354d0881dbf3248a9bc9bdca675340e9c3
 
 Search for vagrant boxes at
 [vagrant box search](https://app.vagrantup.com/boxes/search).
 
-<<<<<<< HEAD
-`my-vagrant-boxes`
-[GitHub Webpage](https://jeffdecola.github.io/my-vagrant-boxes/).
-
-## USE VAGRANT BOXES
-
-* ubuntu-docker-container
-  * Run an ubuntu 18.04 in a docker container
-  * Use
-    [tknerr/baseimage-ubuntu-16.04](https://app.vagrantup.com/tknerr/boxes/baseimage-ubuntu-16.04)
-    Vagrant Box (for docker)
- 
-
-## CREATE VAGRANT BOX
-
-=======
 [GitHub Webpage](https://jeffdecola.github.io/my-vagrant-boxes/).
 
 ## USE VAGRANT BOXES - FOR DOCKER
@@ -199,7 +179,6 @@ in your ~/.ssh/known_hosts. Hence,
 ```bash
 ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
 ```
->>>>>>> bcf434354d0881dbf3248a9bc9bdca675340e9c3
 
 A gui should also pop up.  User and password is vagrant.
 
