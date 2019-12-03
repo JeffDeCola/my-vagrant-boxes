@@ -4,7 +4,7 @@
 [![Issue Count](https://codeclimate.com/github/JeffDeCola/my-vagrant-boxes/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/my-vagrant-boxes/issues)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
-`my-vagrant-boxes` _is a place for me to use vagrant boxes and create vagrant boxes.
+A place for me to use vagrant and create vagrant boxes.
 The goal is to create a common development environment._
 
 tl;dr,
@@ -25,6 +25,7 @@ vagrant box remove ubuntu/jeffs-ubuntu
 * [USE VAGRANT BOXES - FOR VIRTUALBOX (WINDOWS)](https://github.com/JeffDeCola/my-vagrant-boxes#use-vagrant-boxes---for-virtualbox-windows)
   * [ubuntu-1604-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1604-virtualbox-vm)
   * [jeffs-ubuntu-1804-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm)
+  * [ubuntu-1904-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1904-virtualbox-vm)
   * [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes#concourse-lite-321-vm)
 * [CREATE VAGRANT BOXES (FOR VIRTUALBOX ON WINDOWS) USING PACKER](https://github.com/JeffDeCola/my-vagrant-boxes#create-vagrant-boxes-for-virtualbox-on-windows-using-packer)
   * [jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm-box)
@@ -146,6 +147,43 @@ ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
 ```
 
 A gui should also pop up.  User and password is vagrant.
+
+### ubuntu-1904-virtualbox-vm
+
+* Development Environment Goal - Run ubuntu 19.04 in a VirtualBox VM (WINDOWS)
+* Using
+  [ubuntu/disco64](https://app.vagrantup.com/ubuntu/boxes/disco64)
+  Vagrant Box (for virtualbox)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1904-virtualbox-vm/Vagrantfile)
+  to manage/configure this development environment
+
+To run enter directory,
+
+```bash
+vagrant up
+```
+
+To ssh onto this VM,
+
+```bash
+vagrant ssh
+```
+
+We are also able to use another ssh client because we are using
+vagrant insecure keys. We have the private key in `~/.vagrant.d`.
+And we places the public key on the box in `~/.ssh/authorized_keys`
+(See Vagrantfile). Also, you may have to delete previous fingerprints
+in your ~/.ssh/known_hosts. Hence,
+
+```bash
+ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
+```
+
+A gui should also pop up.  User and password is vagrant.
+
+Here is an illustration of what we did (it is the same diagram I used for 16.04 above),
+
+![IMAGE - ubuntu-1604-virtualbox-vm - IMAGE](docs/pics/ubuntu-1604-virtualbox-vm.jpg)
 
 ### concourse-lite-321-vm
 
