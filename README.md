@@ -19,6 +19,8 @@ vagrant box add --name "ubuntu/jeffs-ubuntu" --force ubuntu-box.box
 vagrant box remove ubuntu/jeffs-ubuntu
 ```
 
+Table of Contents,
+
 * [USE VAGRANT BOXES - FOR DOCKER](https://github.com/JeffDeCola/my-vagrant-boxes#use-vagrant-boxes---for-docker)
   * [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1804-docker-container)
 * [USE VAGRANT BOXES - FOR VIRTUALBOX (WINDOWS)](https://github.com/JeffDeCola/my-vagrant-boxes#use-vagrant-boxes---for-virtualbox-windows)
