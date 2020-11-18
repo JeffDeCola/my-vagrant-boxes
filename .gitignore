@@ -1,6 +1,12 @@
 // CONCOURSE
 .credentials.yml
 
+// GO
+coverage.out
+
+// macOS
+.DS_Store
+
 // Ignore .vagrant
 **/.vagrant
 **/.log
