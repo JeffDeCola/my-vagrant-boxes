@@ -1,15 +1,16 @@
 # ubuntu-1804-docker-container
 
-_Run ubuntu 18.04 in a docker container._
+_The development environment goal is to run ubuntu 18.04 in a docker container._
 
-## OVERVIEW
+## VAGRANTFILE
 
-* Development Environment Goal - Run ubuntu 18.04 in a docker container
-* Using
-  [tknerr/baseimage-ubuntu-18.04](https://app.vagrantup.com/tknerr/boxes/baseimage-ubuntu-18.04)
-  Vagrant Box (for docker)
+ Used to manage and configure this development environment.
+
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/for-docker/ubuntu-1804-docker-container/Vagrantfile)
-  to manage/configure this development environment
+  * Ubuntu 18.04
+  * Using
+    [tknerr/baseimage-ubuntu-18.04](https://app.vagrantup.com/tknerr/boxes/baseimage-ubuntu-18.04)
+    vagrant box (for docker)
 
 ## RUN
 

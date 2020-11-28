@@ -1,17 +1,16 @@
 # jeffs-ubuntu-1804-virtualbox-vm
 
-_Run ubuntu 18.04 in a docker container._
+_The development environment goal is to run ubuntu 18.04 in a VirtualBox VM (WINDOWS)._
 
-## OVERVIEW
+## VAGRANTFILE
 
-Using the box we created,
+ Used to manage and configure this development environment.
 
-* Development Environment Goal - Run ubuntu 18.04 in a VirtualBox VM (WINDOWS)
-* Using
-  [ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/create-vagrant-box-for-virtualbox-on-windows-using-packer/jeffs-ubuntu-1804-virtualbox-vm-box)
-  Vagrant Box (for virtualbox) that was created below
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/for-virtualbox-windows/jeffs-ubuntu-1804-virtualbox-vm/Vagrantfile)
-  to manage/configure this development environment
+  * Ubuntu 18.04
+  * Using my
+    [ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/create-vagrant-box-for-virtualbox-on-windows-using-packer/jeffs-ubuntu-1804-virtualbox-vm-box)
+    vagrant box (for virtualbox)
 
 ## RUN
 

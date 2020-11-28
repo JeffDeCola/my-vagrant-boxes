@@ -1,15 +1,16 @@
 # concourse-lite-321-vm
 
-_Run ubuntu 18.04 in a docker container._
+_The development environment goal is to run concourse 3.2.1 in a VirtualBox VM (WINDOWS)._
 
-## OVERVIEW
+## VAGRANTFILE
 
-* Development Environment Goal - Run concourse 3.2.1 in a VirtualBox VM (WINDOWS)
-* Using
-  [concourse/lite](https://app.vagrantup.com/concourse/boxes/lite)
-  Vagrant Box (for virtualbox)
+ Used to manage and configure this development environment.
+
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/for-virtualbox-windows/concourse-lite-321-vm/Vagrantfile)
-  to manage/configure this development environment
+  * Concourse 3.2.1
+  * Using
+    [concourse/lite](https://app.vagrantup.com/concourse/boxes/lite)
+    vagrant box (for virtualbox)
 
 ## RUN
 
