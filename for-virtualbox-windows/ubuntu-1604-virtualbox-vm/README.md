@@ -13,7 +13,7 @@ _Run ubuntu 18.04 in a docker container._
 
 ## RUN
 
-To run enter directory,
+To run,
 
 ```bash
 vagrant up
@@ -35,7 +35,7 @@ in your ~/.ssh/known_hosts. Hence,
 ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
 ```
 
-A gui should also pop up.  User and password is vagrant.
+A gui should also pop up. User and password is vagrant.
 
 ## ILLUSTRATION
 
