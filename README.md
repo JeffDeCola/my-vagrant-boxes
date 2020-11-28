@@ -3,8 +3,8 @@
 [![Issue Count](https://codeclimate.com/github/JeffDeCola/my-vagrant-boxes/badges/issue_count.svg)](https://codeclimate.com/github/JeffDeCola/my-vagrant-boxes/issues)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 
-_A place for me to use vagrant and create vagrant boxes.
-The goal is to create a common development environment._
+_A place for me to create and use vagrant boxes with
+the goal of having a common development environment._
 
 tl;dr,
 
@@ -38,16 +38,16 @@ Documentation and reference,
 
 ## MY VAGRANT BOXES
 
-All sections in alphabetical order.
+_All sections in alphabetical order._
 
 ### CREATE VAGRANT BOX (FOR VIRTUALBOX ON WINDOWS) USING PACKER
 
 _Packer is great at creating images, so lets create our own
 custom vagrant box using packer._
 
-* [jeffs-ubuntu-1804-virtualbox-vm-box]()
+* [jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/create-vagrant-box-for-virtualbox-on-windows-using-packer/jeffs-ubuntu-1804-virtualbox-vm-box)
 
-  _Create a vagrant box of ubuntu 18.04._
+  _Create a vagrant box from scratch of ubuntu 18.04._
 
 ### FOR DOCKER
 
@@ -55,30 +55,30 @@ _I'm not sure I'm sold on this since I could just easily make a docker image
 using a Dockerfile.  So I'm not sure I see the real benefit of doing this.
 But here it is anyway._
 
-* [ubuntu-1804-docker-container]()
+* [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-docker/ubuntu-1804-docker-container)
 
-  _Create a box to run ubuntu 18.04 in a docker container_
+  _Run ubuntu 18.04 in a docker container_
 
 ### FOR VIRTUALBOX (WINDOWS)
 
 _This is also nice if you have a lot of Virtual Machines and want to fire them up
 on another machine.  I love configuration files._
 
-* [ubuntu-1604-virtualbox-vm]()
+* [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/concourse-lite-321-vm)
 
-  _Run ubuntu 16.04 in a VirtualBox VM (WINDOWS)_
+  _Run concourse 3.2.1 in a VirtualBox VM (WINDOWS)_
 
-* [jeffs-ubuntu-1804-virtualbox-vm]()
+* [jeffs-ubuntu-1804-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/jeffs-ubuntu-1804-virtualbox-vm)
 
   _Run ubuntu 18.04 in a VirtualBox VM (WINDOWS)_
 
-* [ubuntu-1904-virtualbox-vm]()
+* [ubuntu-1604-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/ubuntu-1604-virtualbox-vm)
+
+  _Run ubuntu 16.04 in a VirtualBox VM (WINDOWS)_
+
+* [ubuntu-1904-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/ubuntu-1904-virtualbox-vm)
 
   _Run ubuntu 19.04 in a VirtualBox VM (WINDOWS)_
-
-* [concourse-lite-321-vm]()
-
-  _Run concourse 3.2.1 in a VirtualBox VM (WINDOWS)_
 
 ## UPDATE GITHUB WEBPAGE USING CONCOURSE (OPTIONAL)
 
