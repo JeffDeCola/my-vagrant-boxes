@@ -28,11 +28,8 @@ Table of Contents,
 
 Documentation and reference,
 
-* My
-  [vagrant-cheat-sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet)
-  has a great illustration of the following boxes
-* Search for vagrant boxes at
-  [vagrant box search](https://app.vagrantup.com/boxes/search)
+* [vagrant-cheat-sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet)
+* [vagrant box search](https://app.vagrantup.com/boxes/search)
 
 [GitHub Webpage](https://jeffdecola.github.io/my-vagrant-boxes/)
 
@@ -42,18 +39,18 @@ _All sections in alphabetical order._
 
 ### CREATE VAGRANT BOX (FOR VIRTUALBOX ON WINDOWS) USING PACKER
 
-_Packer is great at creating images, so lets create our own
-custom vagrant box using packer._
+Packer is great at creating images, so lets create our own
+custom vagrant box using packer.
 
 * [jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/create-vagrant-box-for-virtualbox-on-windows-using-packer/jeffs-ubuntu-1804-virtualbox-vm-box)
 
-  _Create a vagrant box from scratch of ubuntu 18.04._
+  _Using packer to build a vagrant box of ubuntu 18.04._
 
 ### FOR DOCKER
 
-_I'm not sure I'm sold on this since I could just easily make a docker image
+I'm not sure I'm sold on this since I could just easily make a docker image
 using a Dockerfile.  So I'm not sure I see the real benefit of doing this.
-But here it is anyway._
+But here it is anyway.
 
 * [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-docker/ubuntu-1804-docker-container)
 
@@ -61,8 +58,8 @@ But here it is anyway._
 
 ### FOR VIRTUALBOX (WINDOWS)
 
-_This is also nice if you have a lot of Virtual Machines and want to fire them up
-on another machine.  I love configuration files._
+This is also nice if you have a lot of Virtual Machines and want to fire them up
+on another machine.  I love configuration files.
 
 * [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/concourse-lite-321-vm)
 
