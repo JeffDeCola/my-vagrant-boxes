@@ -22,15 +22,9 @@ vagrant box remove ubuntu/jeffs-ubuntu
 
 Table of Contents,
 
-* [USE VAGRANT BOXES - FOR DOCKER](https://github.com/JeffDeCola/my-vagrant-boxes#use-vagrant-boxes---for-docker)
-  * [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1804-docker-container)
-* [USE VAGRANT BOXES - FOR VIRTUALBOX (WINDOWS)](https://github.com/JeffDeCola/my-vagrant-boxes#use-vagrant-boxes---for-virtualbox-windows)
-  * [ubuntu-1604-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1604-virtualbox-vm)
-  * [jeffs-ubuntu-1804-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm)
-  * [ubuntu-1904-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes#ubuntu-1904-virtualbox-vm)
-  * [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes#concourse-lite-321-vm)
-* [CREATE VAGRANT BOXES (FOR VIRTUALBOX ON WINDOWS) USING PACKER](https://github.com/JeffDeCola/my-vagrant-boxes#create-vagrant-boxes-for-virtualbox-on-windows-using-packer)
-  * [jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes#jeffs-ubuntu-1804-virtualbox-vm-box)
+* [CREATE VAGRANT BOX (FOR VIRTUALBOX ON WINDOWS) USING PACKER](https://github.com/JeffDeCola/my-vagrant-boxes#create-vagrant-box-for-virtualbox-on-windows-using-packer)
+* [FOR DOCKER](https://github.com/JeffDeCola/my-vagrant-boxes#for-docker)
+* [FOR VIRTUALBOX (WINDOWS)](https://github.com/JeffDeCola/my-vagrant-boxes#for-virtualbox-windows)
 
 Documentation and reference,
 
