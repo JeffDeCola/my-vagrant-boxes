@@ -36,7 +36,7 @@ vagrant box list
 vagrant box remove ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box
 ```
 
-Done, use as normal.
+Use as normal.
 
 ## ILLUSTRATION
 

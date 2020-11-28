@@ -13,7 +13,7 @@ _Run ubuntu 18.04 in a docker container._
 
 ## RUN
 
-To run enter directory,
+To run,
 
 ```bash
 vagrant up
