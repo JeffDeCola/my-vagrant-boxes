@@ -2,16 +2,18 @@
 
 _Run ubuntu 18.04 in a docker container._
 
-
+## OVERVIEW
 
 Using the box we created below,
 
 * Development Environment Goal - Run concourse 3.2.1 in a VirtualBox VM (WINDOWS)
 * Using
   [concourse/lite](https://app.vagrantup.com/concourse/boxes/lite)
-  Vagrant Box (for virtualbox).
-* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/concourse-lite-321-vm/Vagrantfile)
+  Vagrant Box (for virtualbox)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/for-virtualbox-windows/concourse-lite-321-vm/Vagrantfile)
   to manage/configure this development environment
+
+## RUN
 
 To run enter directory,
 
@@ -37,9 +39,10 @@ ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
 
 A gui should also pop up.  User and password is vagrant.
 
+## CHECK
+
 You can check it out on your machine
 [192.168.100.4:8080](http://192.168.100.4:8080/).
 
 Refer to my cheat sheet on concourse
 [here](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/operations-tools/continuous-integration-continuous-deployment/concourse-cheat-sheet).
-

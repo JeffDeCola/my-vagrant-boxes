@@ -2,12 +2,16 @@
 
 _Run ubuntu 18.04 in a docker container._
 
+## OVERVIEW
+
 * Development Environment Goal - Run ubuntu 19.04 in a VirtualBox VM (WINDOWS)
 * Using
   [ubuntu/disco64](https://app.vagrantup.com/ubuntu/boxes/disco64)
   Vagrant Box (for virtualbox)
-* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ubuntu-1904-virtualbox-vm/Vagrantfile)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/for-virtualbox-windows/ubuntu-1904-virtualbox-vm/Vagrantfile)
   to manage/configure this development environment
+
+## RUN
 
 To run enter directory,
 
@@ -33,6 +37,8 @@ ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
 
 A gui should also pop up.  User and password is vagrant.
 
-Here is an illustration of what we did (it is the same diagram I used for 16.04 above),
+## ILLUSTRATION
 
-![IMAGE - ubuntu-1604-virtualbox-vm - IMAGE](docs/pics/ubuntu-1604-virtualbox-vm.jpg)
+This may help,
+
+![IMAGE - ubuntu-1604-virtualbox-vm - IMAGE](../../docs/pics/ubuntu-1604-virtualbox-vm.jpg)
