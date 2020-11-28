@@ -1,15 +1,16 @@
 # ubuntu-1904-virtualbox-vm
 
-_Run ubuntu 18.04 in a docker container._
+_The development environment goal is to run ubuntu 19.04 in a VirtualBox VM (WINDOWS)._
 
-## OVERVIEW
+## VAGRANTFILE
 
-* Development Environment Goal - Run ubuntu 19.04 in a VirtualBox VM (WINDOWS)
-* Using
-  [ubuntu/disco64](https://app.vagrantup.com/ubuntu/boxes/disco64)
-  Vagrant Box (for virtualbox)
+ Used to manage and configure this development environment.
+
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/for-virtualbox-windows/ubuntu-1904-virtualbox-vm/Vagrantfile)
-  to manage/configure this development environment
+  * Ubuntu 19.04
+  * Using
+    [ubuntu/disco64](https://app.vagrantup.com/ubuntu/boxes/disco64)
+    vagrant box (for virtualbox)
 
 ## RUN
 
