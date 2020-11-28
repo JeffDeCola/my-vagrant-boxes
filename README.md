@@ -57,7 +57,7 @@ But here it is anyway._
 
 * [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-docker/ubuntu-1804-docker-container)
 
-  _Run ubuntu 18.04 in a docker container_
+  _Run ubuntu 18.04 in a docker container._
 
 ### FOR VIRTUALBOX (WINDOWS)
 
@@ -66,19 +66,19 @@ on another machine.  I love configuration files._
 
 * [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/concourse-lite-321-vm)
 
-  _Run concourse 3.2.1 in a VirtualBox VM (WINDOWS)_
+  _Run concourse 3.2.1 in a VirtualBox VM (WINDOWS)._
 
 * [jeffs-ubuntu-1804-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/jeffs-ubuntu-1804-virtualbox-vm)
 
-  _Run ubuntu 18.04 in a VirtualBox VM (WINDOWS)_
+  _Run ubuntu 18.04 in a VirtualBox VM (WINDOWS)._
 
 * [ubuntu-1604-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/ubuntu-1604-virtualbox-vm)
 
-  _Run ubuntu 16.04 in a VirtualBox VM (WINDOWS)_
+  _Run ubuntu 16.04 in a VirtualBox VM (WINDOWS)._
 
 * [ubuntu-1904-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/ubuntu-1904-virtualbox-vm)
 
-  _Run ubuntu 19.04 in a VirtualBox VM (WINDOWS)_
+  _Run ubuntu 19.04 in a VirtualBox VM (WINDOWS)._
 
 ## UPDATE GITHUB WEBPAGE USING CONCOURSE (OPTIONAL)
 
