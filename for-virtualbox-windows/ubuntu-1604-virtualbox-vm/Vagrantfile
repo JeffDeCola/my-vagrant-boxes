@@ -1,10 +1,11 @@
 # This will create a virtualbox vm on your machine from a vagrant box.
 Vagrant.configure(2) do |jeffsconfig|
   
-    # STEP 1 - GET BASE BOX
+    # STEP 1 - GET BASE BOX ########################################################
+
     jeffsconfig.vm.box = "ubuntu/xenial64"
 
-    # STEP 2 - CONFIGURE ON PROVIDER (WINDOWS VIRTUALBOX)
+    # STEP 2 - CONFIGURE ON PROVIDER (WINDOWS VIRTUALBOX) ##########################
 
     # Will not created .ssh key pairs.
     # You can use insecure public key you already placed in ~/.ssh/authorized_keys
@@ -25,7 +26,8 @@ Vagrant.configure(2) do |jeffsconfig|
         # jeffsvb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
     end
 
-    # STEP 3 - PROVISION
+    # STEP 3 - PROVISION ###########################################################
+
     jeffsconfig.vm.provision "shell", inline: <<-SHELL
         apt-get update
         sudo apt-get install -y htop
