@@ -8,7 +8,7 @@ _Create a vagrant box from scratch of ubuntu 18.04._
 * Using
   `iso/ubuntu-18.04.2-server-amd64.iso`
   ubuntu 18.04 .iso file
-* [Packer template](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/jeffs-ubuntu-1804-virtualbox-vm-box/vagrant-packer-template.json)
+* [Packer template](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/create-vagrant-box-for-virtualbox-on-windows-using-packer/jeffs-ubuntu-1804-virtualbox-vm-box/vagrant-packer-template.json)
   to manage/configure this development environment
 
 We will use a base image and add `htop` to it.
@@ -36,8 +36,10 @@ vagrant box list
 vagrant box remove ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box
 ```
 
+Done, use as normal.
+
 ## ILLUSTRATION
 
-Here is an illustration of what we did,
+This may help,
 
 ![IMAGE - jeffs-ubuntu-1804-virtualbox-vm-box - IMAGE](../../docs/pics/jeffs-ubuntu-1804-virtualbox-vm-box.jpg)
