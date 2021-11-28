@@ -78,3 +78,7 @@ on another machine.  I love configuration files.
 * [ubuntu-1904-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/ubuntu-1904-virtualbox-vm)
 
   _Run ubuntu 19.04 in a VirtualBox VM (WINDOWS)._
+
+* [ubuntu-2004-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/ubuntu-2004-virtualbox-vm)
+
+  _Run ubuntu 20.04 in a VirtualBox VM (WINDOWS)._
