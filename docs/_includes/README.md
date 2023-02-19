@@ -1,33 +1,29 @@
-_built with
-[concourse ci](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ci-README.md)_
+  _built with
+  [concourse](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ci-README.md)_
 
-# MY VAGRANT BOXES
+# CREATE A VAGRANT BOX (FOR VIRTUALBOX ON WINDOWS) USING PACKER
 
-_All sections in alphabetical order._
-
-### CREATE VAGRANT BOX (FOR VIRTUALBOX ON WINDOWS) USING PACKER
-
-Packer is great at creating images, so lets create our own
-custom vagrant box using packer.
+_Packer is great at creating images, so lets create our own
+custom vagrant box using packer._
 
 * [jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/create-vagrant-box-for-virtualbox-on-windows-using-packer/jeffs-ubuntu-1804-virtualbox-vm-box)
 
   _Using packer to build a vagrant box of ubuntu 18.04._
 
-### FOR DOCKER
+## FOR DOCKER
 
-I'm not sure I'm sold on this since I could just easily make a docker image
+_I'm not sure I'm sold on this since I could just easily make a docker image
 using a Dockerfile.  So I'm not sure I see the real benefit of doing this.
-But here it is anyway.
+But here it is anyway._
 
 * [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-docker/ubuntu-1804-docker-container)
 
   _Run ubuntu 18.04 in a docker container._
 
-### FOR VIRTUALBOX (WINDOWS)
+## FOR VIRTUALBOX ON WINDOWS
 
-This is also nice if you have a lot of Virtual Machines and want to fire them up
-on another machine.  I love configuration files.
+_This is also nice if you have a lot of Virtual Machines and want to fire them up
+on another machine.  I love configuration files._
 
 * [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/concourse-lite-321-vm)
 
@@ -44,3 +40,7 @@ on another machine.  I love configuration files.
 * [ubuntu-1904-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/ubuntu-1904-virtualbox-vm)
 
   _Run ubuntu 19.04 in a VirtualBox VM (WINDOWS)._
+
+* [ubuntu-2004-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/ubuntu-2004-virtualbox-vm)
+
+  _Run ubuntu 20.04 in a VirtualBox VM (WINDOWS)._
