@@ -1,1 +1,0 @@
-Hi Everyone.  This is a test of packer creating a vagrant box

@@ -4,28 +4,36 @@
 [![MIT License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 [![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
 
-_A place for me to create and use vagrant boxes with
-the goal of having a common development environment._
+_A place to keep my vagrant boxes._
 
 tl;dr,
 
 ```bash
-# RUN
+# BUILD & DEPLOY VAGRANT BOX TO DOCKER
+vagrant up???
+vagrant ssh???
+ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1???
+
+# BUILD & DEPLOY VAGRANT BOX TO VIRTUALBOX
 vagrant up
 vagrant ssh
 ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
 
-# LIST/ADD/REMOVE VAGRANT BOXES
+# OTHER COMMANDS
 vagrant box list
 vagrant box add --name "ubuntu/jeffs-ubuntu" --force ubuntu-box.box
+vagrant box add --insecure ???????????????? --insecure
 vagrant box remove ubuntu/jeffs-ubuntu
 ```
 
 Table of Contents
 
-* [CREATE A VAGRANT BOX (FOR VIRTUALBOX ON WINDOWS) USING PACKER](https://github.com/JeffDeCola/my-vagrant-boxes#create-a-vagrant-box-for-virtualbox-on-windows-using-packer)
-* [FOR DOCKER](https://github.com/JeffDeCola/my-vagrant-boxes#for-docker)
-* [FOR VIRTUALBOX ON WINDOWS](https://github.com/JeffDeCola/my-vagrant-boxes#for-virtualbox-on-windows)
+* [LINUX](https://github.com/JeffDeCola/my-vagrant-boxes#linux)
+  * [DOCKER](https://github.com/JeffDeCola/my-vagrant-boxes#docker)
+  * [VIRTUALBOX](https://github.com/JeffDeCola/my-vagrant-boxes#virtualbox)
+* [WINDOWS](https://github.com/JeffDeCola/my-vagrant-boxes#windows)
+  * [DOCKER](https://github.com/JeffDeCola/my-vagrant-boxes#docker)
+  * [VIRTUALBOX](https://github.com/JeffDeCola/my-vagrant-boxes#virtualbox)
 
 Documentation and Reference
 
@@ -37,46 +45,42 @@ Documentation and Reference
   _built with
   [concourse](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ci-README.md)_
 
-## CREATE A VAGRANT BOX (FOR VIRTUALBOX ON WINDOWS) USING PACKER
+## LINUX
 
-_Packer is great at creating images, so lets create our own
-custom vagrant box using packer._
+### DOCKER
 
-* [jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/create-vagrant-box-for-virtualbox-on-windows-using-packer/jeffs-ubuntu-1804-virtualbox-vm-box)
+* [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/linux/docker/ubuntu-1804-docker-container)
 
-  _Using packer to build a vagrant box of ubuntu 18.04._
+  _Build and deploy ubuntu 18.04 in a docker container on linux._
 
-## FOR DOCKER
+### VIRTUALBOX
 
-_I'm not sure I'm sold on this since I could just easily make a docker image
-using a Dockerfile.  So I'm not sure I see the real benefit of doing this.
-But here it is anyway._
+* _Coming soon_
 
-* [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-docker/ubuntu-1804-docker-container)
+## WINDOWS
 
-  _Run ubuntu 18.04 in a docker container._
+### DOCKER
 
-## FOR VIRTUALBOX ON WINDOWS
+* _Coming soon_
 
-_This is also nice if you have a lot of Virtual Machines and want to fire them up
-on another machine.  I love configuration files._
+### VIRTUALBOX
 
-* [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/concourse-lite-321-vm)
+* [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/concourse-lite-321-vm)
 
-  _Run concourse 3.2.1 in a VirtualBox VM (WINDOWS)._
+  _Build and deploy concourse 3.2.1 in a VirtualBox VM on Windows._
 
-* [jeffs-ubuntu-1804-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/jeffs-ubuntu-1804-virtualbox-vm)
+* [jeffs-ubuntu-1804-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/jeffs-ubuntu-1804-virtualbox-vm)
 
-  _Run ubuntu 18.04 in a VirtualBox VM (WINDOWS)._
+  _Build and deploy ubuntu 18.04 in a VirtualBox VM on Windows._
 
-* [ubuntu-1604-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/ubuntu-1604-virtualbox-vm)
+* [ubuntu-1604-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/ubuntu-1604-virtualbox-vm)
 
-  _Run ubuntu 16.04 in a VirtualBox VM (WINDOWS)._
+  _Build and deploy ubuntu 16.04 in a VirtualBox VM on Windows._
 
-* [ubuntu-1904-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/ubuntu-1904-virtualbox-vm)
+* [ubuntu-1904-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/ubuntu-1904-virtualbox-vm)
 
-  _Run ubuntu 19.04 in a VirtualBox VM (WINDOWS)._
+  _Build and deploy ubuntu 19.04 in a VirtualBox VM on Windows._
 
-* [ubuntu-2004-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/for-virtualbox-windows/ubuntu-2004-virtualbox-vm)
+* [ubuntu-2004-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/ubuntu-2004-virtualbox-vm)
 
-  _Run ubuntu 20.04 in a VirtualBox VM (WINDOWS)._
+  _Build and deploy ubuntu 20.04 in a VirtualBox VM on Windows._

@@ -1,16 +1,32 @@
 # concourse-lite-321-vm
 
-_The development environment goal is to run concourse 3.2.1 in a VirtualBox VM (WINDOWS)._
+_Build and deploy concourse 3.2.1 in a VirtualBox VM on Windows._
 
 ## VAGRANTFILE
 
  Used to manage and configure this development environment.
 
-* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/for-virtualbox-windows/concourse-lite-321-vm/Vagrantfile)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/windows/virtualbox/concourse-lite-321-vm/Vagrantfile)
   * Concourse 3.2.1
   * Using
     [concourse/lite](https://app.vagrantup.com/concourse/boxes/lite)
     vagrant box (for virtualbox)
+
+## GET BASE BOX
+
+Copy the Vagrantfile to a windows folder.
+
+In powershell, you may have to get the box/image first. Do one of the following,
+
+```bash
+vagrant box list
+vagrant box add concourse/lite
+vagrant box add --insecure concourse/lite --insecure
+```
+
+
+
+
 
 ## RUN
 
