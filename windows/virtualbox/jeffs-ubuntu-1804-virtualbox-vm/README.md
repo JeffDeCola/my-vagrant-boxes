@@ -1,16 +1,32 @@
 # jeffs-ubuntu-1804-virtualbox-vm
 
-_The development environment goal is to run ubuntu 18.04 in a VirtualBox VM (WINDOWS)._
+_Build and deploy ubuntu 18.04 in a VirtualBox VM on Windows._
 
 ## VAGRANTFILE
 
  Used to manage and configure this development environment.
 
-* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/for-virtualbox-windows/jeffs-ubuntu-1804-virtualbox-vm/Vagrantfile)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/windows/virtualbox/jeffs-ubuntu-1804-virtualbox-vm/Vagrantfile)
   * Ubuntu 18.04
   * Using my
     [ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/create-vagrant-box-for-virtualbox-on-windows-using-packer/jeffs-ubuntu-1804-virtualbox-vm-box)
     vagrant box (for virtualbox)
+
+## GET BASE BOX
+
+Copy the Vagrantfile to a windows folder.
+
+In powershell, you may have to get the box/image first. Do one of the following,
+
+```bash
+vagrant box list
+vagrant box add ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box
+vagrant box add --insecure ubuntu/jeffs-ubuntu-1804-virtualbox-vm-box --insecure
+```
+
+
+
+
 
 ## RUN
 

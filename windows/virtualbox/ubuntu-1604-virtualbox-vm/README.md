@@ -1,25 +1,31 @@
-# ubuntu-2004-virtualbox-vm
+# ubuntu-1604-virtualbox-vm
 
-_The development environment goal is to run ubuntu 20.04 in a VirtualBox VM (WINDOWS)._
+_Build and deploy ubuntu 16.04 in a VirtualBox VM on Windows._
 
 ## VAGRANTFILE
 
  Used to manage and configure this development environment.
 
-* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/for-virtualbox-windows/ubuntu-2004-virtualbox-vm/Vagrantfile)
-  * Ubuntu 20.04 LTS
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/windows/virtualbox/ubuntu-1604-virtualbox-vm/Vagrantfile)
+  * Ubuntu 16.04
   * Using
-    [ubuntu/focal64](https://app.vagrantup.com/ubuntu/boxes/focal64)
+    [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64)
     vagrant box (for virtualbox)
 
-## TO USE WITH WINDOWS AND WSL2
+## GET BASE BOX
 
-Simply copy the VagrantFile to a windows folder outside WSL 2.
+Copy the Vagrantfile to a windows folder.
 
-## NETWORK
+In powershell, you may have to get the box/image first. Do one of the following,
 
-In the virtualbox setting set network adapter 1 to Host-only and adapter 2 to NAT.
-You will have to run ifconfig to find the IP you can use to ssh into.
+```bash
+vagrant box list
+vagrant box add ubuntu/xenial64
+vagrant box add --insecure ubuntu/xenial64 --insecure
+```
+
+
+
 
 ## RUN
 
@@ -43,7 +49,6 @@ in your ~/.ssh/known_hosts. Hence,
 
 ```bash
 ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
-ssh -i ~/.vagrant.d/insecure_private_key -p 22 vagrant@192.168.56.102
 ```
 
 A gui should also pop up. User and password is vagrant.

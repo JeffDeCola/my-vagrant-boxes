@@ -1,16 +1,32 @@
-# ubuntu-1604-virtualbox-vm
+# ubuntu-1904-virtualbox-vm
 
-_The development environment goal is to run ubuntu 16.04 in a VirtualBox VM (WINDOWS)._
+_Build and deploy ubuntu 19.04 in a VirtualBox VM on Windows._
 
 ## VAGRANTFILE
 
  Used to manage and configure this development environment.
 
-* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/for-virtualbox-windows/ubuntu-1604-virtualbox-vm/Vagrantfile)
-  * Ubuntu 16.04
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/windows/virtualbox/ubuntu-1904-virtualbox-vm/Vagrantfile)
+  * Ubuntu 19.04
   * Using
-    [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64)
+    [ubuntu/disco64](https://app.vagrantup.com/ubuntu/boxes/disco64)
     vagrant box (for virtualbox)
+
+## GET BASE BOX
+
+Copy the Vagrantfile to a windows folder.
+
+In powershell, you may have to get the box/image first. Do one of the following,
+
+```bash
+vagrant box list
+vagrant box add ubuntu/disco64
+vagrant box add --insecure ubuntu/disco64 --insecure
+```
+
+
+
+
 
 ## RUN
 
