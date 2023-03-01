@@ -40,6 +40,8 @@ Documentation and Reference
 * My
   [vagrant cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet)
 * [vagrant box search](https://app.vagrantup.com/boxes/search)
+* An illustration of
+  [vagrant, docker and packer](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet#vagrant-docker-and-packer)
 * This repos
   [github webpage](https://jeffdecola.github.io/my-vagrant-boxes/)
   _built with
@@ -84,3 +86,5 @@ Documentation and Reference
 * [ubuntu-2004-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/ubuntu-2004-virtualbox-vm)
 
   _Build and deploy ubuntu 20.04 in a VirtualBox VM on Windows._
+
+![IMAGE - vagrant docker packer - IMAGE](./docs/pics/vagrant-docker-packer.jpg)
