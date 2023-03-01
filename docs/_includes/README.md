@@ -40,3 +40,5 @@
 * [ubuntu-2004-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/ubuntu-2004-virtualbox-vm)
 
   _Build and deploy ubuntu 20.04 in a VirtualBox VM on Windows._
+
+![IMAGE - vagrant docker packer - IMAGE](./docs/pics/vagrant-docker-packer.jpg)
