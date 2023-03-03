@@ -9,82 +9,82 @@ _A place to keep my vagrant boxes._
 tl;dr,
 
 ```bash
-# BUILD & DEPLOY VAGRANT BOX TO DOCKER
-vagrant up???
-vagrant ssh???
-ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1???
-
-# BUILD & DEPLOY VAGRANT BOX TO VIRTUALBOX
+# BUILD & DEPLOY VAGRANT BOX
 vagrant up
+
+## CONNECT
 vagrant ssh
-ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@127.0.0.1
+ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@{IP}
 
 # OTHER COMMANDS
 vagrant box list
-vagrant box add --name "ubuntu/jeffs-ubuntu" --force ubuntu-box.box
-vagrant box add --insecure ???????????????? --insecure
-vagrant box remove ubuntu/jeffs-ubuntu
+vagrant box add --name {VAGRANT IMAGE (BOX) NAME} --force ubuntu-box.box
+vagrant box add --insecure {VAGRANT IMAGE (BOX) NAME}--insecure
+vagrant box remove {VAGRANT IMAGE (BOX) NAME}
 ```
 
 Table of Contents
 
-* [LINUX](https://github.com/JeffDeCola/my-vagrant-boxes#linux)
-  * [DOCKER](https://github.com/JeffDeCola/my-vagrant-boxes#docker)
-  * [VIRTUALBOX](https://github.com/JeffDeCola/my-vagrant-boxes#virtualbox)
-* [WINDOWS](https://github.com/JeffDeCola/my-vagrant-boxes#windows)
-  * [DOCKER](https://github.com/JeffDeCola/my-vagrant-boxes#docker)
-  * [VIRTUALBOX](https://github.com/JeffDeCola/my-vagrant-boxes#virtualbox)
+* [OVERVIEW](https://github.com/JeffDeCola/my-vagrant-boxes#overview)
+* [DOCKER](https://github.com/JeffDeCola/my-vagrant-boxes#docker)
+* [VIRTUALBOX](https://github.com/JeffDeCola/my-vagrant-boxes#virtualbox)
 
 Documentation and Reference
 
 * My
   [vagrant cheat sheet](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet)
 * [vagrant box search](https://app.vagrantup.com/boxes/search)
-* An illustration of
-  [vagrant, docker and packer](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/development/development-environments/vagrant-cheat-sheet#vagrant-docker-and-packer)
+* An illustration of how
+  [vagrant, docker and packer](https://github.com/JeffDeCola/my-cheat-sheets/tree/master/software/operations/orchestration/builds-deployment-containers/packer-cheat-sheet#vagrant-docker-and-packer)
+  build and deploy images
+* My
+  [clean-vagrant.sh](https://github.com/JeffDeCola/my-linux-shell-scripts/tree/master/software/clean-vagrant)
+  linux script
 * This repos
   [github webpage](https://jeffdecola.github.io/my-vagrant-boxes/)
   _built with
   [concourse](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/ci-README.md)_
 
-## LINUX
+## OVERVIEW
 
-### DOCKER
+Vagrant is useful for the automated **BUILD** and **DEPLOY** of a custom image
+in an isolated environment.  This is useful for easily launching a common
+custom design environment for a project because you only need a Vagrantfile.
+These builds and deploys use the following statement,
 
-* [ubuntu-1804-docker-container](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/linux/docker/ubuntu-1804-docker-container)
+**Using vagrant to build a/an {CUSTOM IMAGE FILE} image
+containing the {CUSTOM IMAGE OS} OS
+to deploy on {PROVIDER TOOL} on {HOST OS}.**
 
-  _Build and deploy ubuntu 18.04 in a docker container on linux._
+Where,
 
-### VIRTUALBOX
+* **CUSTOM IMAGE FILE**: docker/gce/virtualbox/etc.
+* **CUSTOM IMAGE OS**: ubuntu/alpine/windows/etc.
+* **PROVIDER TOOL**: docker/gce/virtualbox/etc.
+* **HOST OS**: linux/windows _(not needed)_
 
-* _Coming soon_
+## DOCKER
 
-## WINDOWS
+_I'm not sure anyone would use this since you can just use docker._
 
-### DOCKER
+* [vagrant-ubuntu-2004-deploy-docker](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker-build-and-deployment/vagrant-ubuntu-2004-deploy-docker)
 
-* _Coming soon_
+  _Using vagrant to build a docker image
+  containing the ubuntu 20.04 OS
+  to deploy on docker._
 
-### VIRTUALBOX
+## VIRTUALBOX
 
-* [concourse-lite-321-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/concourse-lite-321-vm)
+_You may run this on linux or windows._
 
-  _Build and deploy concourse 3.2.1 in a VirtualBox VM on Windows._
+* [vagrant-ubuntu-2204-deploy-virtualbox](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox-build-and-deployment/vagrant-ubuntu-2204-deploy-virtualbox)
 
-* [jeffs-ubuntu-1804-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/jeffs-ubuntu-1804-virtualbox-vm)
+  _Using vagrant to build a virtualbox image
+  containing the ubuntu 22.04 OS
+  to deploy on virtualbox._
 
-  _Build and deploy ubuntu 18.04 in a VirtualBox VM on Windows._
+* [vagrant-windows-11-deploy-virtualbox](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox-build-and-deployment/vagrant-windows-11-deploy-virtualbox)
 
-* [ubuntu-1604-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/ubuntu-1604-virtualbox-vm)
-
-  _Build and deploy ubuntu 16.04 in a VirtualBox VM on Windows._
-
-* [ubuntu-1904-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/ubuntu-1904-virtualbox-vm)
-
-  _Build and deploy ubuntu 19.04 in a VirtualBox VM on Windows._
-
-* [ubuntu-2004-virtualbox-vm](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/windows/virtualbox/ubuntu-2004-virtualbox-vm)
-
-  _Build and deploy ubuntu 20.04 in a VirtualBox VM on Windows._
-
-![IMAGE - vagrant docker packer - IMAGE](./docs/pics/vagrant-docker-packer.jpg)
+  _Using vagrant to build a virtualbox image
+  containing the windows 11 OS
+  to deploy on virtualbox._

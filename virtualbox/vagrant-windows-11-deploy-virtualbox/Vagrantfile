@@ -1,0 +1,49 @@
+# my-vagrant-boxes vagrant-windows-11-deploy-virtualbox
+
+Vagrant.configure("2") do |jeffsconfig|
+  
+  # STEP 1 - GET SOURCE VAGRANT IMAGE (BOX) ######################################
+
+  jeffsconfig.vm.box = "gusztavvargadr/windows-11"
+
+  # STEP 2 - CONFIGURE CUSTOM VIRTUALBOX IMAGE ON PROVIDER (VIRTUALBOX) ##########
+
+  # Timeout since windows boot is very slow
+  jeffsconfig.vm.boot_timeout = 1000
+  
+  # Don't use shared mount folder (You would need guest additions to do this)    
+  jeffsconfig.vm.synced_folder '.', '/vagrant', disabled: true
+
+  # Port forward WinRM (Windows Remote Management) and RDP
+  jeffsconfig.vm.network "forwarded_port", guest: 3389, host: 3389, id: "rdp", auto_correct: true
+  jeffsconfig.vm.network :forwarded_port, guest: 5985, host: 5985, id: "winrm", auto_correct: true
+
+  # winrm config, uses modern.ie default user/password.
+  # If other credentials are used must be changed here
+  jeffsconfig.vm.communicator = "winrm"
+  jeffsconfig.winrm.host = "localhost"
+  jeffsconfig.winrm.username = "IEUser"
+  jeffsconfig.winrm.password = "Passw0rd!"
+  jeffsconfig.vm.guest = :windows
+
+  jeffsconfig.vm.provider "virtualbox" do |jeffsvb|
+      jeffsvb.name = 'vagrant-windows-11-deploy-virtualbox'
+      jeffsvb.gui = true  # turn on the graphic window
+      jeffsvb.customize ['setextradata', :id, 'GUI/ScaleFactor', '2.00']
+      jeffsvb.customize ["modifyvm", :id, "--memory", "4096"]
+      jeffsvb.customize ["modifyvm", :id, "--vram", "128"]
+      jeffsvb.customize ["modifyvm", :id,  "--cpus", "3"]
+      jeffsvb.customize ["modifyvm", :id, "--ioapic", "on"]
+      jeffsvb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+      jeffsvb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      jeffsvb.customize ["guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 10000]
+      jeffsvb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
+      jeffsvb.customize ["modifyvm", :id, "--usb", "on"]
+      jeffsvb.customize ["modifyvm", :id, "--usbxhci", "on"]
+  end
+
+  # STEP 3 - PROVISION VIRTUALBOX IMAGE ##########################################
+
+  # N/A
+
+end
