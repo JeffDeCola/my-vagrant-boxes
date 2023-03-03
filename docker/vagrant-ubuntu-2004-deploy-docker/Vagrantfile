@@ -1,0 +1,26 @@
+# my-vagrant-boxes vagrant-ubuntu-2004-deploy-docker
+
+Vagrant.configure("2") do |jeffsconfig|
+
+    jeffsconfig.vm.provider "docker" do |jeffsdocker|
+
+        # STEP 1 - GET BASE BOX (IMAGE) ############################################
+
+        jeffsdocker.image = "tknerr/baseimage-ubuntu-20.04"
+
+        # STEP 2 - CONFIGURE ON PROVIDER (DOCKER) ##################################
+
+        jeffsdocker.has_ssh = true
+        jeffsdocker.name = "vagrant-ubuntu-2004-deploy-docker"
+        jeffsdocker.vm.synced_folder '.', '/vagrant', disabled: true
+    end
+    
+    # STEP 3 - PROVISION ###########################################################
+
+    # jeffsconfig.vm.provision "shell", inline: <<-SHELL
+        # apt-get -y update
+        # apt-get -y upgrade
+        # sudo apt-get install -y htop
+    # SHELL
+
+end
