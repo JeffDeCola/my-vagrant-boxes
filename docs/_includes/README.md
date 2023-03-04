@@ -3,9 +3,9 @@
 
 # OVERVIEW
 
-Vagrant is useful for the automated **BUILD** and **DEPLOY** of a custom image
-in an isolated environment.  This is useful for easily launching a common
-custom design environment for a project because you only need a Vagrantfile.
+Vagrant is useful for the automated **BUILD** and **DEPLOY** of a custom image.
+This is useful for easily launching a common custom design environment
+for a project because you only need a Vagrantfile.
 
 ![IMAGE - vagrant-overview - IMAGE](pics/vagrant-overview.jpg)
 
