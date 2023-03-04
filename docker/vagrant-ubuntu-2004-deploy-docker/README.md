@@ -7,12 +7,18 @@ _Using vagrant to build a docker image
 containing the ubuntu 20.04 OS
 to deploy on docker._
 
+Table of Contents
+
+* [VAGRANTFILE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-ubuntu-2004-deploy-docker#vagrantfile)
+* [BUILD & DEPLOY IMAGE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-ubuntu-2004-deploy-docker#build--deploy-image)
+* [TEST](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-ubuntu-2004-deploy-docker#test)
+
 ## VAGRANTFILE
 
 * _Using vagrant to build a docker image
  containing the ubuntu 20.04 OS
  to deploy on docker._
-* [Vagrantfile](https://github.com/JeffDeCola/my-docker-image-builds/blob/master/images/compact-multi-stage-build-example/Vagrantfile)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/docker/vagrant-ubuntu-2004-deploy-docker/Vagrantfile)
 * Size: ~????
 * Source Image: vagrant
   * **"tknerr/baseimage-ubuntu-20.04"** for docker on linux

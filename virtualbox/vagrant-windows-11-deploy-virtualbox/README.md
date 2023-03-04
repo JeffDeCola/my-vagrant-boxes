@@ -7,9 +7,15 @@ _Using vagrant to build a virtualbox image
 containing the windows 11 OS
 to deploy on virtualbox._
 
+Table of Contents
+
+* [VAGRANTFILE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox/vagrant-windows-11-deploy-virtualbox#vagrantfile)
+* [BUILD & DEPLOY IMAGE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox/vagrant-windows-11-deploy-virtualbox#build--deploy-image)
+* [TEST](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox/vagrant-windows-11-deploy-virtualbox#test)
+
 ## VAGRANTFILE
 
-* [Vagrantfile](https://github.com/JeffDeCola/my-docker-image-builds/blob/master/virtualbox/vagrant-ubuntu-2204-deploy-virtualbox/Vagrantfile)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/virtualbox/vagrant-windows-11-deploy-virtualbox/Vagrantfile)
 * Size: ~5GB
 * Source Image: vagrant
   * **"gusztavvargadr/windows-11"** for virtualbox on linux or windows
