@@ -4,7 +4,7 @@
 [![MIT License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 [![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
 
-_A place to keep my vagrant boxes._
+_A place to keep my vagrant images (boxes)._
 
 tl;dr,
 
@@ -50,6 +50,9 @@ Documentation and Reference
 Vagrant is useful for the automated **BUILD** and **DEPLOY** of a custom image
 in an isolated environment.  This is useful for easily launching a common
 custom design environment for a project because you only need a Vagrantfile.
+
+![IMAGE - vagrant-overview - IMAGE](docs/pics/vagrant-overview.jpg)
+
 These builds and deploys use the following statement,
 
 **Using vagrant to build a/an {CUSTOM IMAGE FILE} image
