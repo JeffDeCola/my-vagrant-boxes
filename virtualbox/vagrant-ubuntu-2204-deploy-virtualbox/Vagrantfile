@@ -5,8 +5,6 @@ Vagrant.configure("2") do |jeffsconfig|
     # STEP 1 - GET SOURCE VAGRANT IMAGE (BOX) ######################################
 
     jeffsconfig.vm.box = "generic/ubuntu2204"
-
-    # STEP 2 - CONFIGURE CUSTOM VIRTUALBOX IMAGE ON PROVIDER (VIRTUALBOX) ##########
     
     # Don't use shared mount folder (You would need guest additions to do this)    
     jeffsconfig.vm.synced_folder '.', '/vagrant', disabled: true
@@ -19,24 +17,31 @@ Vagrant.configure("2") do |jeffsconfig|
     jeffsconfig.ssh.private_key_path = ['~/.vagrant.d/insecure_private_key']
 
     jeffsconfig.vm.provider "virtualbox" do |jeffsvb|
+
+        # STEP 2 - CONFIGURE CUSTOM VIRTUALBOX IMAGE ON PROVIDER (VIRTUALBOX) ##########
+
         jeffsvb.name = 'vagrant-ubuntu-2204-deploy-virtualbox'
         jeffsvb.gui = true  # turn on the graphic window
-        jeffsvb.memory = 8192
-        jeffsvb.cpus = 3
+        jeffsvb.customize ['setextradata', :id, 'GUI/ScaleFactor', '2.00']
+        jeffsvb.customize ["modifyvm", :id, "--memory", "8192"]
+        jeffsvb.customize ["modifyvm", :id, "--vram", "128"]
+        jeffsvb.customize ["modifyvm", :id,  "--cpus", "3"]
         jeffsvb.customize ["modifyvm", :id, "--groups", "/From Vagrant Up"]
-        jeffsvb.customize ["modifyvm", :id, "--vram", "128"] 
         # jeffsvb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         # jeffsvb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+
     end
 
-    # STEP 3 - PROVISION VIRTUALBOX IMAGE ##########################################
+    # STEP 3 - PROVISION CUSTOM VIRTUALBOX IMAGE #######################################
 
     jeffsconfig.vm.provision "shell", inline: <<-SHELL
+
         apt-get -y update
         apt-get -y upgrade
         # sudo apt-get install -y htop
-        sudo adduser --disabled-password --gecos "" jeff
-        # to set passwd in gui just do `sudo passwd jeff`
+        sudo adduser --disabled-login "" jeff
+        # to set passwd just do `sudo passwd jeff`
+    
     SHELL
   
 end

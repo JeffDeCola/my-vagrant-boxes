@@ -6,8 +6,6 @@ Vagrant.configure("2") do |jeffsconfig|
 
   jeffsconfig.vm.box = "gusztavvargadr/windows-11"
 
-  # STEP 2 - CONFIGURE CUSTOM VIRTUALBOX IMAGE ON PROVIDER (VIRTUALBOX) ##########
-
   # Timeout since windows boot is very slow
   jeffsconfig.vm.boot_timeout = 1000
   
@@ -27,10 +25,13 @@ Vagrant.configure("2") do |jeffsconfig|
   jeffsconfig.vm.guest = :windows
 
   jeffsconfig.vm.provider "virtualbox" do |jeffsvb|
+
+      # STEP 2 - CONFIGURE CUSTOM VIRTUALBOX IMAGE ON PROVIDER (VIRTUALBOX) ##########
+
       jeffsvb.name = 'vagrant-windows-11-deploy-virtualbox'
       jeffsvb.gui = true  # turn on the graphic window
       jeffsvb.customize ['setextradata', :id, 'GUI/ScaleFactor', '2.00']
-      jeffsvb.customize ["modifyvm", :id, "--memory", "4096"]
+      jeffsvb.customize ["modifyvm", :id, "--memory", "8192"]
       jeffsvb.customize ["modifyvm", :id, "--vram", "128"]
       jeffsvb.customize ["modifyvm", :id,  "--cpus", "3"]
       jeffsvb.customize ["modifyvm", :id, "--ioapic", "on"]
@@ -40,9 +41,10 @@ Vagrant.configure("2") do |jeffsconfig|
       jeffsvb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
       jeffsvb.customize ["modifyvm", :id, "--usb", "on"]
       jeffsvb.customize ["modifyvm", :id, "--usbxhci", "on"]
+
   end
 
-  # STEP 3 - PROVISION VIRTUALBOX IMAGE ##########################################
+  # STEP 3 - PROVISION CUSTOM VIRTUALBOX IMAGE #########################################
 
   # N/A
 
