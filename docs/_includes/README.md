@@ -26,7 +26,7 @@ Where,
 
 _I'm not sure anyone would use this since you can just use docker._
 
-* [vagrant-ubuntu-2004-deploy-docker](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker-build-and-deployment/vagrant-ubuntu-2004-deploy-docker)
+* [vagrant-ubuntu-2004-deploy-docker](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-ubuntu-2004-deploy-docker)
 
   _Using vagrant to build a docker image
   containing the ubuntu 20.04 OS
@@ -36,13 +36,13 @@ _I'm not sure anyone would use this since you can just use docker._
 
 _You may run this on linux or windows._
 
-* [vagrant-ubuntu-2204-deploy-virtualbox](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox-build-and-deployment/vagrant-ubuntu-2204-deploy-virtualbox)
+* [vagrant-ubuntu-2204-deploy-virtualbox](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox/vagrant-ubuntu-2204-deploy-virtualbox)
 
   _Using vagrant to build a virtualbox image
   containing the ubuntu 22.04 OS
   to deploy on virtualbox._
 
-* [vagrant-windows-11-deploy-virtualbox](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox-build-and-deployment/vagrant-windows-11-deploy-virtualbox)
+* [vagrant-windows-11-deploy-virtualbox](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox/vagrant-windows-11-deploy-virtualbox)
 
   _Using vagrant to build a virtualbox image
   containing the windows 11 OS
