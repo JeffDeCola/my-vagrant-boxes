@@ -15,7 +15,7 @@ Table of Contents
 
 ## VAGRANTFILE
 
-* [Vagrantfile](https://github.com/JeffDeCola/my-docker-image-builds/blob/master/virtualbox/vagrant-ubuntu-2204-deploy-virtualbox/Vagrantfile)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/virtualbox/vagrant-ubuntu-2204-deploy-virtualbox/Vagrantfile)
 * Size: ~5GB
 * Source Image: vagrant
   * **"generic/ubuntu2204"** for virtualbox on linux or windows
