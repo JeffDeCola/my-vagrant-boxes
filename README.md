@@ -9,11 +9,12 @@ _A place to keep my vagrant images (boxes)._
 tl;dr,
 
 ```bash
-# BUILD & DEPLOY VAGRANT BOX
+# BUILD & DEPLOY VAGRANT IMAGE (BOX)
 vagrant up
 
 ## CONNECT
 vagrant ssh
+vagrant ssh-config
 ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@{IP}
 
 # OTHER COMMANDS
