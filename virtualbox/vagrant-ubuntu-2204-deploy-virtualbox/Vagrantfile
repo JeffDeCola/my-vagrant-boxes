@@ -6,7 +6,7 @@ Vagrant.configure("2") do |jeffsconfig|
 
     jeffsconfig.vm.box = "generic/ubuntu2204"
     
-    # Don't use shared mount folder (You would need guest additions to do this)    
+    # FOR WSL - Don't use shared mount folder (You would need guest additions to do this)    
     jeffsconfig.vm.synced_folder '.', '/vagrant', disabled: true
 
     # SSH KEYS

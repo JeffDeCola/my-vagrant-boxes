@@ -4,11 +4,17 @@ Vagrant.configure("2") do |jeffsconfig|
 
     jeffsconfig.vm.hostname = "vagrant-ubuntu-2004-deploy-docker"
 
+    # Timeout since windows boot is very slow
+    jeffsconfig.vm.boot_timeout = 1000
+
+    # FOR WSL - Don't use shared mount folder (You would need guest additions to do this)    
+    jeffsconfig.vm.synced_folder '.', '/vagrant', disabled: true
+
     jeffsconfig.vm.provider "docker" do |jeffsdocker|
 
         # STEP 1 - GET SOURCE VAGRANT IMAGE (BOX) ##################################
 
-        jeffsdocker.image = "iknite/trusty64"
+        jeffsdocker.image = "tknerr/baseimage-ubuntu-20.04"
         # jeffsdocker.image = "tknerr/baseimage-ubuntu-20.04"
 
         # STEP 2 - CONFIGURE CUSTOM DOCKER IMAGE ON PROVIDER (DOCKER) ###############
