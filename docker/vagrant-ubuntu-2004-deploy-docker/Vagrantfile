@@ -2,6 +2,9 @@
 
 Vagrant.configure("2") do |jeffsconfig|
 
+    # STEP 1 - GET SOURCE VAGRANT IMAGE (BOX) ######################################
+
+    jeffsconfig.vm.box = "tknerr/baseimage-ubuntu-20.04"
     jeffsconfig.vm.hostname = "vagrant-ubuntu-2004-deploy-docker"
 
     # Timeout since windows boot is very slow
@@ -14,8 +17,7 @@ Vagrant.configure("2") do |jeffsconfig|
 
         # STEP 1 - GET SOURCE VAGRANT IMAGE (BOX) ##################################
 
-        jeffsdocker.image = "tknerr/baseimage-ubuntu-20.04"
-        # jeffsdocker.image = "tknerr/baseimage-ubuntu-20.04"
+        # jeffsdocker.image = "DOCKER IMAGE NAME"
 
         # STEP 2 - CONFIGURE CUSTOM DOCKER IMAGE ON PROVIDER (DOCKER) ###############
 
