@@ -21,8 +21,6 @@ Table of Contents
   * **"gusztavvargadr/windows-11"** for virtualbox on linux or windows
 * Custom Image:  virtualbox
   * windows 11 for virtualbox on linux or windows
-* Contains:
-  * added user jeff
 
 ## BUILD & DEPLOY IMAGE
 

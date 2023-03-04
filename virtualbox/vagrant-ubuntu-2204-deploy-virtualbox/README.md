@@ -22,7 +22,7 @@ Table of Contents
 * Custom Image:  virtualbox
   * ubuntu 22.04 for virtualbox on linux or windows
 * Contains:
-  * added user jeff
+  * added user jeff with no initial password
 
 ## BUILD & DEPLOY IMAGE
 
