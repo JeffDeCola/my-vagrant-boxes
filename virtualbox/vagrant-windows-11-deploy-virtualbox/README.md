@@ -16,7 +16,7 @@ Table of Contents
 ## VAGRANTFILE
 
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/virtualbox/vagrant-windows-11-deploy-virtualbox/Vagrantfile)
-* Size: ~5GB
+* Size: ~15GB
 * Source Image: vagrant
   * **"gusztavvargadr/windows-11"** for virtualbox on linux or windows
 * Custom Image:  virtualbox
