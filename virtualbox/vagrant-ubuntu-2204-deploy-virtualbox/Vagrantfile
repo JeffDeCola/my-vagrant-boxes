@@ -39,8 +39,10 @@ Vagrant.configure("2") do |jeffsconfig|
         apt-get -y update
         apt-get -y upgrade
         # sudo apt-get install -y htop
-        sudo adduser --disabled-login "" jeff
-        # to set passwd just do `sudo passwd jeff`
+        # Add user and allow to login without password
+        sudo adduser --disabled-password --gecos "" jeff
+        sudo passwd -d jeff
+        # To set passwd just do `sudo passwd jeff`
     
     SHELL
   
