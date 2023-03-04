@@ -2,24 +2,26 @@
 
 Vagrant.configure("2") do |jeffsconfig|
 
+    jeffsconfig.vm.hostname = "vagrant-ubuntu-2004-deploy-docker"
+
     jeffsconfig.vm.provider "docker" do |jeffsdocker|
 
         # STEP 1 - GET SOURCE VAGRANT IMAGE (BOX) ##################################
 
-        jeffsdocker.image = "tknerr/baseimage-ubuntu-20.04"
+        jeffsdocker.image = "iknite/trusty64"
+        # jeffsdocker.image = "tknerr/baseimage-ubuntu-20.04"
 
         # STEP 2 - CONFIGURE CUSTOM DOCKER IMAGE ON PROVIDER (DOCKER) ###############
 
-        jeffsdocker.has_ssh = true
         jeffsdocker.name = "vagrant-ubuntu-2004-deploy-docker"
-        jeffsdocker.vm.synced_folder '.', '/vagrant', disabled: true
+        jeffsdocker.has_ssh = true
 
     end
-    
+
     # STEP 3 - PROVISION CUSTOM DOCKER IMAGE #########################################
 
     jeffsconfig.vm.provision "shell", inline: <<-SHELL
-        
+
         apt-get -y update
         apt-get -y upgrade
         sudo apt-get install -y htop
