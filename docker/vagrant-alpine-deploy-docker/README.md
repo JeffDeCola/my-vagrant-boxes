@@ -1,4 +1,4 @@
-# vagrant-ubuntu-2004-deploy-docker
+# vagrant-alpine-deploy-docker
 
 [![MIT License](http://img.shields.io/:license-mit-blue.svg)](http://jeffdecola.mit-license.org)
 [![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
@@ -10,13 +10,13 @@ to deploy on docker._
 
 Table of Contents
 
-* [VAGRANTFILE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-ubuntu-2004-deploy-docker#vagrantfile)
-* [BUILD & DEPLOY IMAGE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-ubuntu-2004-deploy-docker#build--deploy-image)
-* [TEST](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-ubuntu-2004-deploy-docker#test)
+* [VAGRANTFILE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-alpine-deploy-docker#vagrantfile)
+* [BUILD & DEPLOY IMAGE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-alpine-deploy-docker#build--deploy-image)
+* [TEST](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-alpine-deploy-docker#test)
 
 ## VAGRANTFILE
 
-* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/docker/vagrant-ubuntu-2004-deploy-docker/Vagrantfile)
+* [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/docker/vagrant-alpine-deploy-docker/Vagrantfile)
 * Size: ~????
 * Source Image: vagrant
   * **"golang:alpine"** for docker on linux
@@ -43,6 +43,6 @@ vagrant up
 To ssh onto running docker container,
 
 ```bash
-docker exec -i -t vagrant-ubuntu-2004-deploy-docker /bin/bash
+docker exec -i -t vagrant-alpine-deploy-docker /bin/bash
 vagrant docker-exec -it -- /bin/sh
 ```
