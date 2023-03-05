@@ -4,7 +4,6 @@
 [![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
 
 _Using vagrant to build a virtualbox image
-**from a vagrant image**
 containing the windows 11 OS
 to deploy on virtualbox._
 

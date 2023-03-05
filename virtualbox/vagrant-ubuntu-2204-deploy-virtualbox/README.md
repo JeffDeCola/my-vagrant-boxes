@@ -4,7 +4,6 @@
 [![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
 
 _Using vagrant to build a virtualbox image
-**from a vagrant image**
 containing the ubuntu 22.04 OS
 to deploy on virtualbox._
 
@@ -23,7 +22,7 @@ Table of Contents
 * Custom Image:  virtualbox
   * ubuntu 22.04 for virtualbox on linux or windows
 * Contains:
-  * added user jeff with no initial password
+  * Added user jeff with no initial password
 
 ## BUILD & DEPLOY IMAGE
 
