@@ -4,8 +4,8 @@
 [![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
 
 _Using vagrant to build a docker image
-**from a vagrant image**
-containing the ubuntu 20.04 OS
+**from a docker image**
+containing the alpine OS
 to deploy on docker._
 
 Table of Contents

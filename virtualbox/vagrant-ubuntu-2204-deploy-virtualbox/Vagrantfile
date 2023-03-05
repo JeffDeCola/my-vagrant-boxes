@@ -2,9 +2,12 @@
 
 Vagrant.configure("2") do |jeffsconfig|
   
-    # STEP 1 - GET SOURCE VAGRANT IMAGE (BOX) ######################################
 
+    # STEP 1 - GET SOURCE VAGRANT IMAGE (BOX) #########################################
     jeffsconfig.vm.box = "generic/ubuntu2204"
+
+    # Set hostname
+    # jeffsconfig.vm.hostname = "vagrant-ubuntu-2204-deploy-virtualbox"
     
     # FOR WSL - Don't use shared mount folder (You would need guest additions to do this)    
     jeffsconfig.vm.synced_folder '.', '/vagrant', disabled: true
@@ -18,8 +21,10 @@ Vagrant.configure("2") do |jeffsconfig|
 
     jeffsconfig.vm.provider "virtualbox" do |jeffsvb|
 
-        # STEP 2 - CONFIGURE CUSTOM VIRTUALBOX IMAGE ON PROVIDER (VIRTUALBOX) ##########
+        # STEP 1 - OR GET SOURCE FOR PROVISION TOOL ####################################
+        # jeffsdocker.image = "golang:alpine"
 
+        # STEP 2 - CONFIGURE CUSTOM VIRTUALBOX IMAGE ON PROVIDER (VIRTUALBOX) ##########
         jeffsvb.name = 'vagrant-ubuntu-2204-deploy-virtualbox'
         jeffsvb.gui = true  # turn on the graphic window
         jeffsvb.customize ['setextradata', :id, 'GUI/ScaleFactor', '2.00']
@@ -33,7 +38,6 @@ Vagrant.configure("2") do |jeffsconfig|
     end
 
     # STEP 3 - PROVISION CUSTOM VIRTUALBOX IMAGE #######################################
-
     jeffsconfig.vm.provision "shell", inline: <<-SHELL
 
         apt-get -y update

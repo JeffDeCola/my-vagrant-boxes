@@ -1,0 +1,37 @@
+# my-vagrant-boxes vagrant-alpine-deploy-docker
+
+Vagrant.configure("2") do |jeffsconfig|
+
+    # STEP 1 - GET SOURCE VAGRANT IMAGE (BOX) ########################################
+    # jeffsconfig.vm.box = "tknerr/baseimage-ubuntu-20.04"
+
+    # Set hostname
+    # jeffsconfig.vm.hostname = "vagrant-alpine-deploy-docker"
+
+    # Timeout since windows boot is very slow
+    jeffsconfig.vm.boot_timeout = 1000
+
+    # FOR WSL - Don't use shared mount folder (You would need guest additions to do this)    
+    jeffsconfig.vm.synced_folder '.', '/vagrant', disabled: true
+
+    jeffsconfig.vm.provider "docker" do |jeffsdocker|
+
+        # STEP 1 - OR GET SOURCE FOR PROVISION TOOL ##################################
+        jeffsdocker.image = "golang:alpine"
+
+        # STEP 2 - CONFIGURE CUSTOM DOCKER IMAGE ON PROVIDER (DOCKER) ################        
+        jeffsdocker.name = "vagrant-alpine-deploy-docker"
+        jeffsdocker.has_ssh = true
+
+    end
+
+    # STEP 3 - PROVISION CUSTOM DOCKER IMAGE #########################################
+    jeffsconfig.vm.provision "shell", inline: <<-SHELL
+
+        apt-get -y update
+        apt-get -y upgrade
+        sudo apt-get install -y htop
+
+    SHELL
+
+end
