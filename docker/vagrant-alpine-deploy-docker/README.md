@@ -16,26 +16,20 @@ Table of Contents
 
 ## VAGRANTFILE
 
-* _Using vagrant to build a docker image
- containing the ubuntu 20.04 OS
- to deploy on docker._
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/docker/vagrant-ubuntu-2004-deploy-docker/Vagrantfile)
 * Size: ~????
 * Source Image: vagrant
-  * **"tknerr/baseimage-ubuntu-20.04"** for docker on linux
+  * **"golang:alpine"** for docker on linux
 * Custom Image: docker
   * ubuntu 20.04 for docker on linux
-* Contains:
-  * ????
 
 ## BUILD & DEPLOY IMAGE
 
-You may have to get the source vagrant image (box) first. Do one of the following,
+You may have to get the source docker image first. Do one of the following,
 
 ```bash
-vagrant box list
-vagrant box add tknerr/baseimage-ubuntu-20.04
-vagrant box add --insecure tknerr/baseimage-ubuntu-20.04 --insecure
+docker images
+docker pull golang:alpine
 ```
 
 To build & deploy,
