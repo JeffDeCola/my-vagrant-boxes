@@ -17,11 +17,13 @@ Table of Contents
 ## VAGRANTFILE
 
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/docker/vagrant-alpine-deploy-docker/Vagrantfile)
-* Size: ~????
-* Source Image: vagrant
+* Size: ~254MB
+* Source Image: docker
   * **"golang:alpine"** for docker on linux
 * Custom Image: docker
   * ubuntu 20.04 for docker on linux
+* Contains:
+  * /home/vagrant/hi-jeff.txt
 
 ## BUILD & DEPLOY IMAGE
 
