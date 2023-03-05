@@ -21,7 +21,7 @@ Vagrant.configure("2") do |jeffsconfig|
 
         # STEP 2 - CONFIGURE CUSTOM DOCKER IMAGE ON PROVIDER (DOCKER) ################        
         jeffsdocker.name = "vagrant-alpine-deploy-docker"
-        jeffsdocker.has_ssh = true
+        # jeffsdocker.has_ssh = true
         jeffsdocker.remains_running = false
 
     end
