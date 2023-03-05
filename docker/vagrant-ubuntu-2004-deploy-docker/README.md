@@ -17,13 +17,13 @@ Table of Contents
 ## VAGRANTFILE
 
 * [Vagrantfile](https://github.com/JeffDeCola/my-vagrant-boxes/blob/master/docker/vagrant-ubuntu-2004-deploy-docker/Vagrantfile)
-* Size: ~????
+* Size: ~260MB
 * Source Image: vagrant
   * **"tknerr/baseimage-ubuntu-20.04"** for docker on linux
 * Custom Image: docker
   * ubuntu 20.04 for docker on linux
 * Contains:
-  * ????
+  * /home/vagrant/hi-jeff.txt
 
 ## BUILD & DEPLOY IMAGE
 

@@ -31,8 +31,8 @@ Vagrant.configure("2") do |jeffsconfig|
       apt-get -y update
       apt-get -y upgrade
       sudo apt-get install -y htop
-      touch /home/vagrant/hijext.txt
-      
+      touch /home/vagrant/hi-jeff.txt
+
   SHELL
 
 end
