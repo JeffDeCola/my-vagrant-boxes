@@ -11,7 +11,7 @@ Table of Contents
 
 * [VAGRANTFILE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox/vagrant-windows-11-deploy-virtualbox#vagrantfile)
 * [BUILD & DEPLOY IMAGE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox/vagrant-windows-11-deploy-virtualbox#build--deploy-image)
-* [TEST](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox/vagrant-windows-11-deploy-virtualbox#test)
+* [TEST IMAGE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/virtualbox/vagrant-windows-11-deploy-virtualbox#test-image)
 
 ## VAGRANTFILE
 
@@ -41,7 +41,7 @@ vagrant up
 Remember, this creates a virtualbox image.  You actually never have to
 vagrant up again.
 
-## TEST
+## TEST IMAGE
 
 There are a few ways to login to the VM.
 

@@ -11,7 +11,7 @@ Table of Contents
 
 * [VAGRANTFILE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-ubuntu-2004-deploy-docker#vagrantfile)
 * [BUILD & DEPLOY IMAGE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-ubuntu-2004-deploy-docker#build--deploy-image)
-* [TEST](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-ubuntu-2004-deploy-docker#test)
+* [TEST IMAGE](https://github.com/JeffDeCola/my-vagrant-boxes/tree/master/docker/vagrant-ubuntu-2004-deploy-docker#test-image)
 
 ## VAGRANTFILE
 
@@ -40,7 +40,7 @@ To build & deploy,
 vagrant up
 ```
 
-## TEST
+## TEST IMAGE
 
 To ssh onto running docker container,
 
