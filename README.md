@@ -6,7 +6,7 @@
 
 _A place to keep my vagrant images (boxes)._
 
-tl;dr,
+tl;dr
 
 ```bash
 # BUILD & DEPLOY VAGRANT IMAGE (BOX)
