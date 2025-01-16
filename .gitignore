@@ -1,8 +1,7 @@
-# CONCOURSE
-.credentials.yml
+# repo-my-vagrant-boxes-.gitignore
 
-# GO
-coverage.out
+# CONCOURSE SECRETS
+.credentials.yml
 
 # macOS
 .DS_Store
@@ -10,24 +9,7 @@ coverage.out
 # WINDOWS
 *.jpg:Zone.Identifier
 
-# Ignore binaries
-**/bin/hello-go
-
-# Ignore test coverage
-**/test/test_coverage.txt
-
-# Ignore binary used for docker build
-**/build-push/hello-go
-
-# Ignore .vagrant
+# VAGRANT
 **/.vagrant
 **/.log
-
 **/ubuntu-1604-virtualbox-vm/*.log
-
-# Ignore Packer
-**/packer_cache
-**/*.box
-**/*.iso
-**/*.iso.lock
-**/*.vdi
