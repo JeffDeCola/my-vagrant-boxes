@@ -1,7 +1,7 @@
 # repo-my-vagrant-boxes-.gitignore
 
 # CONCOURSE SECRETS
-.credentials.yml
+.concourse-secrets.yml
 
 # macOS
 .DS_Store
