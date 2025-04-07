@@ -1,7 +1,7 @@
 # vagrant-ubuntu-2004-deploy-docker
 
-[![MIT License](https://img.shields.io/:license-mit-blue.svg)](https://jeffdecola.mit-license.org)
 [![jeffdecola.com](https://img.shields.io/badge/website-jeffdecola.com-blue)](https://jeffdecola.com)
+[![MIT License](https://img.shields.io/:license-mit-blue.svg)](https://jeffdecola.mit-license.org)
 
 _Using vagrant to build a docker image
 containing the ubuntu 20.04 OS
