@@ -1,4 +1,4 @@
-# repo-my-vagrant-boxes-.gitignore
+# .gitignore
 
 # CONCOURSE SECRETS
 .concourse-secrets.yml
@@ -22,6 +22,8 @@ sftp.json
 # TAR FILES
 *.tar.gz
 *.tar.gz.gpg
+
+# repo-my-vagrant-boxes.gitignore SPECIFIC BELOW ---------------------------------------------
 
 # VAGRANT
 **/.vagrant
